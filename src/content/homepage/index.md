@@ -1,64 +1,69 @@
 ---
 banner:
-  title: "Scale design & dev operations with Avocode Enterprise"
-  content: "A fully integrated suite of authentication & authoriz products, Stytch’s platform removes the headache of."
+  title: "Revolutionize Your Business with Cutting-Edge AI Solutions"
+  content: "Harness the Power of Generative AI to Drive Innovation, Efficiency, and Growth"
   image: /images/banner-img.png
   button:
-    label: Download The Theme
+    label: Schedule a Free Consultation
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
 
 ##key features
 key_features:
-  title: "The Highlighting Part Of Our Solution"
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
+  title: "Our AI Consulting Services"
+  description: At Juan Jaramillo AI Consulting Services, we offer a comprehensive suite of Generative AI solutions tailored to your industry needs
   feature_list:
     - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: GenAI Strategy Development
+      content: Tailored AI roadmaps to transform your business with cutting-edge generative AI technologies.
     - icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Computer Vision Applications
+      content: AI-powered image and video analysis for object detection, recognition, and visual insights.
     - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: AI-Driven Process Automation
+      content: Streamline operations with intelligent automation, boosting efficiency and reducing errors.
     - icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: AI-Assisted Design and Creative Tools
+      content: Enhance creative processes with AI, generating innovative designs and content ideas.
     - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: AI Model Fine-tuning and Optimization
+      content: Customize and enhance pre-trained models for peak performance in specific use cases.
     - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Natural Language Processing Solutions
+      content: Advanced language understanding and generation for enhanced communication and analysis.
     - icon: "link"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Predictive Analytics and Forecasting
+      content: Data-driven predictions to inform strategic decisions and optimize business outcomes.
     - icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Personalization Engines
+      content: AI-powered customization for unique user experiences and targeted content delivery.
     - icon: "map"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Data Augmentation and Synthetic Data Generation
+      content: Expand and diversify datasets to improve AI model training and performance.
     - icon: "monitor"  #icon package react-feather-icon [https://feathericons.com/]
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      title: Ethical AI and Governance
+      content: Ensure responsible AI implementation with focus on fairness, transparency, and compliance.
+  footer_title: "Discover how our expertise can transform your business."
+  footer_description: At Juan Jaramillo AI Consulting Services, we offer a comprehensive suite of Generative AI solutions tailored to your industry needs
 
 #service
 service:
   homepage_tab:
-    title: Prevent failure from to impacting your reputation
-    description: Our platform helps you build secure onboarding authentication experiences that retain and engage your users. We build the infrastructure, you can.
+    title: AI in Action, Transforming Industries
+    description: Explore how our cutting-edge AI solutions have revolutionized businesses across various sectors, delivering measurable results and driving innovation.
     tab_list:
-        - title: Habit building essential choose habit
+        - title: Revolutionizing Fintech with AI-Driven Fraud Detection
           icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/sells-by-country.png"
-        - title: Get an overview of Habit Calendars.
+          description: Learn how we helped a leading fintech company reduce fraud by 75% using our advanced AI algorithms.
+        - title: Transforming E-commerce with Personalized Recommendations
           icon: "clock"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/collaboration.png"
-        - title: Start building with Habitify platform
+          description: Discover how our AI-powered recommendation engine increased sales by 40% for a major online retailer.
+        - title: Optimizing Healthcare with Predictive Analytics
           icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/sells-by-country.png"
+          description: See how our AI solutions improved patient outcomes and reduced costs for a nationwide hospital network.
 
   our_service:
     - title: Accept payments any country in this whole universe
@@ -80,8 +85,8 @@ service:
 
 #testimonial
 testimonial:
-  title: Our customers have nice things to say about us
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
+  title: Our clients have nice things to say about us
+  description: Hear from industry leaders who have transformed their businesses with our AI solutions.
   testimonial_list:
     - author: David Cameron
       avatar: "/images/users/user-5.png"

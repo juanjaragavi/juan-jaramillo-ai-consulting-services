@@ -118,7 +118,7 @@
   padding: 0;
   margin: 0;
   display: flex;
-  border-bottom: 1px solid #aaa;
+  border: 0px;
 }
 
 .tab-nav-item {
@@ -128,17 +128,18 @@
 }
 
 .tab-nav-item.active {
-  border-bottom: 3px solid #aaa;
+  border: 0px;
   opacity: 1;
 }
 
 .tab-content .tab-content-panel {
   display: none;
-  padding: 1rem 0.5rem;
+  padding: 2rem;
 }
 
 .tab-content .tab-content-panel.active {
   display: block;
+  padding: 2rem 0.5rem;
 }
 
 // accordion
@@ -403,14 +404,14 @@ select:invalid {
 //services
 .services {
   .tab-nav {
-    @apply inline-block;
+    @apply inline-block rounded-lg;
   }
 
   .tab-nav-item {
-    @apply mb-4 flex rounded py-0 text-dark opacity-100;
+    @apply my-4 flex rounded-lg py-0 text-dark opacity-100;
   }
   .tab-nav-item.active {
-    @apply border-b-0 bg-primary/40 py-3.5;
+    @apply border-0 rounded-lg bg-primary/20 py-3.5;
   }
 }
 // career
