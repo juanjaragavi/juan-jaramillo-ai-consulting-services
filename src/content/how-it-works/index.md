@@ -1,38 +1,27 @@
 ---
-title: How It Works
-page_title: our structured approach helps you navigate uncertainties
+title: Services
+page_title: We provide tailored Generative AI solutions for your industry-specific needs.
 
 
 # perfomance
 perfomance:
-  - title: market profetionals
-    description: Encourage frequent & timely recognition integrating with communication tools
+  - title: AI Expertise
+    description: Leverage cutting-edge AI technologies tailored to your business needs
     image: "/images/how-it-work/results.png"
-  - title: measurable results
-    description: Encourage frequent & timely recognition integrating with communication tools
+  - title: Data-Driven Insights
+    description: Transform raw data into actionable intelligence for informed decision-making
     image: "/images/how-it-work/market-professionals.png"
-  - title: international award
-    description: Encourage frequent & timely recognition integrating with communication tools
+  - title: Global Recognition
+    description: Benefit from internationally acknowledged AI consulting excellence
     image: "/images/how-it-work/awards.png"
 # works
 our_works:
-  - title: We'll do the legwork so you don't have to.
+  - title: We'll Transform Your Business with AI So You Can Focus on Growth
     image: "/images/how-it-work/image-1.png"
     list:
-      - Supporting more than 119 country world
-      - Open transaction with more than currencies
-      - Customer Service with 79 languages
-  - title: We'll do the legwork so you don't have to.
-    image: "/images/how-it-work/image-2.png"
-    list:
-      - Supporting more than 119 country world
-      - Open transaction with more than currencies
-      - Customer Service with 79 languages
-  - title: Check out their profiles, reviews On.
-    image: "/images/how-it-work/image-3.png"
-    list:
-      - Supporting more than 119 country world
-      - Open transaction with more than currencies
-      - Customer Service with 79 languages
+      - Cutting-edge AI solutions tailored to 10+ industries
+      - Data-driven insights to boost your decision-making
+      - AI integration that scales with your business needs
+      - Ethical AI implementation ensuring compliance and trust
 ---
-Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque <br /> nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.Lorem
+At Juan Jaramillo AI Consulting Services, we offer a comprehensive suite of Generative AI solutions designed to drive innovation, efficiency, and growth across your organization.
