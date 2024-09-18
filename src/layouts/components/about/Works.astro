@@ -1,7 +1,8 @@
 ---
+import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 const {
-  features: { title, button, features_list },
+  features: { title, titleWorks, button, features_list },
 } = Astro.props;
 ---
 
@@ -20,6 +21,11 @@ const {
           </div>
         )
       }
+    </div>
+    <div class="mt-20 row justify-center text-center">
+      <div class="col-8">
+        <h2 set:html={markdownify(titleWorks)} />
+      </div>
     </div>
     <div class="row mt-14">
       {

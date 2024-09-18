@@ -2,8 +2,8 @@
 title: "About"
 page_title: "Our Journey in AI Innovation"
 buttons:
-  - label: Meet our Founder
-    link: "https://themefisher.com/astro-themes/pinwheel-astro"
+  - label: Contact Us
+    link: "contact"
     enable: true
   - label: Learn More
     link: "#"
@@ -40,23 +40,24 @@ gallery:
 ## our works
 features:
   title: We are committed to ethically pushing AI boundaries while ensuring sustainable practices. Our focus remains on delivering exceptional value to clients through cutting-edge AI technologies as we grow and evolve.
+  titleWorks: Our Approach to AI Consulting
   button:
     label: Schedule a Free Consultation
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
   features_list:
-    - title: Accessibility
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Empowerement
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Excellence
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Innovation
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Innovation
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Innovation
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
+    - title: Understand
+      content: We begin by deeply understanding your business, industry, and specific challenges.
+    - title: Strategize
+      content: We develop a tailored AI strategy aligned with your business goals and industry-specific needs.
+    - title: Innovate
+      content: We leverage our expertise in GenAI to create innovative solutions that address your unique challenges.
+    - title: Implement
+      content: We work alongside your team to seamlessly integrate AI solutions into your existing workflows.
+    - title: Optimize
+      content: We continuously fine-tune and optimize our solutions to ensure maximum efficiency and ROI.
+    - title: Educate
+      content: We empower your team with the knowledge to leverage AI effectively in your daily operations.
     
 
 ## members
