@@ -8,7 +8,7 @@ const { title, images } = gallery;
   <div class="container">
     <div class="row justify-center text-center">
       <div class="col-8">
-        <h2 set:html={markdownify(title)} />
+        <h4 set:html={markdownify(title)} />
       </div>
     </div>
 
@@ -42,11 +42,12 @@ const { title, images } = gallery;
 <script>
   import Shuffle from "shufflejs";
   const element = document.getElementById("photo-gallery");
-  const sizer = element.querySelector(".js-shuffle-sizer");
-  // Assumes you're using the UMD version of Shuffle (for example, from unpkg.com).
-  const shuffleInstance = new Shuffle(element, {
-    itemSelector: ".picture-item",
-    sizer: sizer,
-    columnWidth: 1,
-  });
+  const sizer = element?.querySelector(".js-shuffle-sizer");
+  if (element && sizer) {
+    const shuffleInstance = new Shuffle(element, {
+      itemSelector: ".picture-item",
+      sizer: sizer as HTMLElement,
+      columnWidth: 1,
+    });
+  }
 </script>

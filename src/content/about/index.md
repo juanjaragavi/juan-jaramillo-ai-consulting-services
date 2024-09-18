@@ -1,8 +1,8 @@
 ---
 title: "About"
-page_title: "About our company"
+page_title: "Our Journey in AI Innovation"
 buttons:
-  - label: Download The Theme
+  - label: Meet our Founder
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
   - label: Learn More
@@ -31,7 +31,7 @@ counter:
     
 # Gallery
 gallery:
-  title: We started with one single goal Empower entrepreneurs
+  title: Our mission is to empower businesses with tailored AI solutions that drive meaningful growth, innovation, and efficiency.
   images:
     - "/images/about/gallery-img-1.png"
     - "/images/about/gallery-img-3.png"
@@ -39,9 +39,9 @@ gallery:
 
 ## our works
 features:
-  title: The six core work <br /> drive everything do
+  title: We are committed to ethically pushing AI boundaries while ensuring sustainable practices. Our focus remains on delivering exceptional value to clients through cutting-edge AI technologies as we grow and evolve.
   button:
-    label: Download The Theme
+    label: Schedule a Free Consultation
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
   features_list:
@@ -83,4 +83,4 @@ members:
       field: Software Engineer
       image: "/images/users/user-3.png"
 ---
-Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Lorem
+Founded in 2024 by Juan Jaramillo, an AI expert with 16+ years of experience, Juan Jaramillo AI Consulting Services leads in providing Generative AI solutions across industries.

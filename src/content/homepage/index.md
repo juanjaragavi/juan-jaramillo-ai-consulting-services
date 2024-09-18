@@ -88,49 +88,34 @@ testimonial:
   title: Our clients have nice things to say about us
   description: Hear from industry leaders who have transformed their businesses with our AI solutions.
   testimonial_list:
-    - author: David Cameron
+    - author: Camilo Villalba
       avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-6.png"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-2.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-3.png"
-      organization: meta limited
+      organization: CEO | ZIONE Shop
       rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-4.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
+      content: Juan and his team's expertise in AI has been game-changing for our business. Their tailored solutions have dramatically improved our efficiency and decision-making processes.
+    - author: Ulrik G. Hansen
       avatar: "/images/users/user-1.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
+      organization: CEO | Marstals Latam
       rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
+      content: Juan's AI-driven process automation solution has been a game-changer for our manufacturing operations. We've increased productivity by 25% and reduced errors by 80%. His deep understanding of both AI and industry-specific challenges sets him apart.
+    - author: Miguel Johns
+      avatar: "/images/users/user-6.png"
+      organization: CEO | moment*
       rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
+      content: The GenAI strategy developed by Juan Jaramillo AI Consulting Services has given us a significant competitive edge in our industry. Their innovative approach and deep understanding of our needs exceeded our expectations.
+    - author: Alex Dillon
+      avatar: "/images/users/user-2.png"
+      organization: CEO | TechAID Solutions
       rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
+      content: Juan's AI-driven process automation solution has been a game-changer for our manufacturing operations. We've increased productivity by 25% and reduced errors by 80%. His deep understanding of both AI and industry-specific challenges sets him apart.
+    - author: Khaterine Hernandez
+      avatar: "/images/users/user-3.png"
+      organization: Project Manager | Fundación Telefónica Movistar
+      rating: five
+      content: Juan's AI solutions revolutionized our financial forecasting. We've seen a 40% improvement in prediction accuracy, leading to more informed decision-making and significant cost savings. His expertise in AI is truly unparalleled.
+    - author: Cindy Ojeda
+      avatar: "/images/users/user-4.png"
+      organization: Teacher | Universidad Francisco Marroquín
+      rating: five
+      content: Implementing Juan's custom NLP model transformed our customer service. We've reduced response times by 60% and increased customer satisfaction scores by 35%. His ability to tailor AI to our specific needs was impressive.
 ---

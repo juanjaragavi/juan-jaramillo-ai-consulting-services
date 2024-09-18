@@ -5,7 +5,7 @@ banner:
   content: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.
   image: "/images/features-banner-img.png"
   button:
-    label: Download The Theme
+    label: Schedule a Free Consultation
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
     enable: true
 project_management:
@@ -42,7 +42,7 @@ project_management:
       - Open transaction with more than currencies
       - Customer Service with 79 languages
     buttons:
-      - label: Download The Theme
+      - label: Schedule a Free Consultation
         link: "https://themefisher.com/astro-themes/pinwheel-astro"
         enable: true
       - label: Learn More
