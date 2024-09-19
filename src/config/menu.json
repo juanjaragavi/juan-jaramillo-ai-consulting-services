@@ -9,6 +9,13 @@
       "url": "/about"
     },
     {
+      "name": "Services",
+      "url": "/services"
+    },{
+      "name": "Industries",
+      "url": "/industries"
+    },
+    {
       "name": "Blog",
       "url": "/blog"
     },
@@ -17,19 +24,10 @@
       "url": "/features"
     },
     {
-      "name": "How It Works",
-      "url": "/how-it-works"
-    },
-    {
       "name": "Pages",
       "url": "",
       "hasChildren": true,
       "children": [
-        {
-          "name": "Career",
-          "url": "/career"
-        },
-
         {
           "name": "Integrations",
           "url": "/integrations"
