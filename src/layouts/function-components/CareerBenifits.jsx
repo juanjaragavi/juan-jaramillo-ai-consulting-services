@@ -35,8 +35,9 @@ const CareerBenifits = ({ benifits: { title, description, benifit_list } }) => {
                     <FeatherIcon color={item.color} size={48} />
                   </span>
                 </div>
-                <h3 className="h4 mb-4 mt-8">{item.title}</h3>
-                <p>{item.content}</p>
+                <h4 className="h4 mb-1 mt-6">{item.title}</h4>
+                <h6 className="text-md leading-6 my-2">{item.subtitle}</h6>
+                <p className="text-sm leading-5">{item.content}</p>
               </div>
             );
           })}
