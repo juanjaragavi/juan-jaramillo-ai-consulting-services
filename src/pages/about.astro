@@ -4,6 +4,7 @@ import Shape from "@/components/Shape.astro";
 import Gallery from "@/components/about/Gallery.astro";
 import Works from "@/components/about/Works.astro";
 import Base from "@/layouts/Base.astro";
+import Cta from "@/layouts/partials/Cta.astro";
 import { getEntryBySlug } from "astro:content";
 
 const about = await getEntryBySlug("about", "index");
@@ -21,7 +22,7 @@ const page_data = {
   image={about.data.image}
 >
   <Shape />
-  <section class="page-hero py-16">
+  <section class="page-hero pt-16">
     <div class="container">
       <div class="page-hero-content mx-auto max-w-[768px] text-center">
         <PageHeader page_data={page_data} />
@@ -30,6 +31,7 @@ const page_data = {
       <Gallery gallery={gallery} />
       <!-- our works -->
       <Works features={features} />
+      <Cta />
     </div>
   </section>
 </Base>
