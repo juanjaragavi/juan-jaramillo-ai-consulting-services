@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import PageHeader from "@/components/PageHeader.astro";
 import Shape from "@/components/Shape.astro";
 import Gallery from "@/components/about/Gallery.astro";
@@ -6,9 +7,10 @@ import Works from "@/components/about/Works.astro";
 import Base from "@/layouts/Base.astro";
 import Cta from "@/layouts/partials/Cta.astro";
 import { getEntryBySlug } from "astro:content";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 const about = await getEntryBySlug("about", "index");
-const { gallery, features } = about.data;
+const { our_works, gallery, features } = about.data;
 const page_data = {
   ...about.data,
   content: about.body,
@@ -31,6 +33,50 @@ const page_data = {
       <Gallery gallery={gallery} />
       <!-- our works -->
       <Works features={features} />
+
+      <section class="w-full min-w-full px-0 mx-0">
+        <div class="container w-full min-w-full px-0 mx-0">
+          {
+            our_works.map((item: any, index: number) => (
+              <div class=" px-0 mx-0 gx-5 row my-12 items-center first:mt-12">
+                <div
+                  class={`lg:col-6 xl:col-6 2xl:col-6 ${
+                    index % 2 === 0 ? "lg:order-1" : "lg:order-0"
+                  }`}
+                >
+                  <div class="relative">
+                    <Image
+                      class="w-full object-contain"
+                      alt="service"
+                      width={473}
+                      height={286}
+                      src={item.image}
+                    />
+                  </div>
+                </div>
+                <div
+                  class={`px-0 mx-0 mt-6 lg:col-6 xl:col-6 2xl:col-6 lg:mt-0 ${
+                    index % 2 === 0 ? "lg:order-0" : "lg:order-1"
+                  }`}
+                >
+                  <div class="text-container">
+                    <h2 class="lg:text-2xl">{item.title}</h2>
+                    <p class="mt-6 lg:text-md">{item.subtitle}</p>
+                    <ul class="mt-6 lg:text-sm xl:text-sm 2xl:text-sm lg:leading-4 xl:leading-4 2xl:leading-4 text-dark lg:-ml-4">
+                      {item.list.map((list: any) => (
+                        <li class="mb-2 flex items-center rounded px-4">
+                          <AiFillCheckCircle className="mr-3 fill-primary text-white" />
+                          {list}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
       <Cta />
     </div>
   </section>

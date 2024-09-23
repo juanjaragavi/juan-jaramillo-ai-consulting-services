@@ -37,6 +37,21 @@ gallery:
     - "/images/about/gallery-img-3.png"
     - "/images/about/gallery-img-2.png"
 
+# founder
+our_works:
+  - title: "Meet Our Founder: Juan Jaramillo"
+    subtitle: Juan Jaramillo is an accomplished expert in artificial intelligence and machine learning with 17 years of experience in spearheading digital and technological initiatives.
+    image: "/images/how-it-work/image-1.png"
+    list:
+      - 16+ years of experience in AI and machine learning
+      - Expertise in Generative AI, NLP, and computer vision
+      - Collaborations with industry giants such as Coca-Cola FEMSA, Grupo Herdez, and El Corte Inglés
+      - Co-founder of TRADEBOG, an innovative startup in the wellness industry
+      - Specializes in Parameter-Efficient Fine-Tuning (PEFT) and Reinforcement Learning with Human Feedback (RLHF)
+      - Proficient in Python, JavaScript, TensorFlow, Hugging Face, PyTorch, and various state-of-the-art ML models
+      - Experienced with leading ML platforms including OpenAI, Anthropic, Google VertexAI, and AWS SageMaker
+
+
 ## our works
 features:
   title: We are committed to ethically pushing AI boundaries while ensuring sustainable practices. Our focus remains on delivering exceptional value to clients through cutting-edge AI technologies as we grow and evolve.
