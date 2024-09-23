@@ -39,7 +39,7 @@ const CareerBenifits = ({ benifits: { title, description, benifit_list } }) => {
                 </div>
                 <h4 className="h4 mb-4 mt-6">{item.title}</h4>
                 <p className="text-lg leading-6">{item.content}</p>
-                  <ul class="w-full min-w-full mt-6 text-dark lg:-ml-4 text-sm lg:text-sm xl:text-sm">
+                <ul class="w-full min-w-full mt-6 text-dark lg:-ml-4 text-sm lg:text-sm xl:text-sm">
                   {item.list?.map((list) => (
                     <li class="px-0 mb-2 flex text-left text-md lg:text-md xl:text-md">
                       <AiFillCheckCircle className="mr-2 fill-primary text-white p-0" />
