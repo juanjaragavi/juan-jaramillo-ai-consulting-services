@@ -6,7 +6,8 @@
   @apply mb-2;
 }
 
-.markdown-content ul, .markdown-content ol {
+.markdown-content ul,
+.markdown-content ol {
   @apply ml-4 mb-2;
 }
 
@@ -14,7 +15,12 @@
   @apply list-disc ml-4;
 }
 
-.markdown-content h1, .markdown-content h2, .markdown-content h3, .markdown-content h4, .markdown-content h5, .markdown-content h6 {
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
   @apply font-bold mb-2;
 }
 
