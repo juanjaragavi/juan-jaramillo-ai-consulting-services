@@ -41,6 +41,11 @@ export default defineConfig({
     }),
     mdx(),
   ],
+  vite: {
+    ssr: {
+      noExternal: ['openai'],
+    },
+  },
   markdown: {
     remarkPlugins: [
       remarkToc,

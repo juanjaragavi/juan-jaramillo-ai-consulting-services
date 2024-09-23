@@ -4,6 +4,7 @@ import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { Image } from "astro:assets";
 import { getEntryBySlug } from "astro:content";
+import ChatUI from "@/chat/ChatUI";
 
 const entry = await getEntryBySlug("contact", "index");
 const { contact_form_action } = config.params;
@@ -22,6 +23,7 @@ const page_data = {
 >
   <section class="page-hero pb-6 pt-16">
     <div class="container"><PageHeader page_data={page_data} /></div>
+    <ChatUI client:load />
   </section>
 
   <section class="section pt-0">
