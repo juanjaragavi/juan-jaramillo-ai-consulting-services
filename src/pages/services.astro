@@ -6,7 +6,7 @@ import Base from "@/layouts/Base.astro";
 import Cta from "@/layouts/partials/Cta.astro";
 import { getEntryBySlug } from "astro:content";
 import { AiFillCheckCircle } from "react-icons/ai";
-import Accordion from "@/pages/components/accordion.mdx"
+import Accordion from "@/pages/components/accordion.mdx";
 
 const how_it_works = await getEntryBySlug("how-it-works", "index");
 const { perfomance, our_works } = how_it_works.data;
@@ -78,7 +78,7 @@ const page_data = {
             >
               <div class="text-container">
                 <h2 class="lg:text-2xl">{item.title}</h2>
-                <p class="mt-6 lg:text-md">{item.subtitle}</h2>
+                <p class="mt-6 lg:text-md">{item.subtitle}</p>
                 <ul class="mt-6 text-dark lg:-ml-4">
                   {item.list.map((list: any) => (
                     <li class="mb-2 flex items-center rounded px-4">

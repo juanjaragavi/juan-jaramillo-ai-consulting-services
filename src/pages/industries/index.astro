@@ -14,7 +14,7 @@ import type { TCareerIndex } from "@/types";
 
 const careerIndex = (await getEntryBySlug<any, string>(
   "careers",
-  "-index",
+  "-index"
 )) as TCareerIndex;
 const { benifits, career, image } = careerIndex.data;
 const categories = await getTaxonomy("careers", "categories");
