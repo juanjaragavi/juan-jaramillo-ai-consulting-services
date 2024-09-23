@@ -1,5 +1,7 @@
 import * as Icon from "react-feather";
 import { humanize } from "@/lib/utils/textConverter";
+import { AiFillCheckCircle } from "react-icons/ai";
+
 const CareerBenifits = ({ benifits: { title, description, benifit_list } }) => {
   return (
     <section className="section">
@@ -35,9 +37,16 @@ const CareerBenifits = ({ benifits: { title, description, benifit_list } }) => {
                     <FeatherIcon color={item.color} size={48} />
                   </span>
                 </div>
-                <h4 className="h4 mb-1 mt-6">{item.title}</h4>
-                <h6 className="text-md leading-6 my-2">{item.subtitle}</h6>
-                <p className="text-sm leading-5">{item.content}</p>
+                <h4 className="h4 mb-4 mt-6">{item.title}</h4>
+                <p className="text-lg leading-6">{item.content}</p>
+                  <ul class="w-full min-w-full mt-6 text-dark lg:-ml-4 text-sm lg:text-sm xl:text-sm">
+                  {item.list?.map((list) => (
+                    <li class="px-0 mb-2 flex text-left text-md lg:text-md xl:text-md">
+                      <AiFillCheckCircle className="mr-2 fill-primary text-white p-0" />
+                      {list}
+                    </li>
+                  ))}
+                </ul>
               </div>
             );
           })}
