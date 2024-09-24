@@ -1,8 +1,8 @@
 {
-  "name": "pinwheel-astro",
+  "name": "juan-jaramillo-ai-consulting-services",
   "version": "2.0.0",
-  "description": "Astro and Tailwindcss boilerplate",
-  "author": "themefisher",
+  "description": "Empowering businesses with cutting-edge AI solutions. We transform challenges into opportunities, driving innovation and growth across industries.",
+  "author": "juan-jaramillo-ai-consulting-services",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {
