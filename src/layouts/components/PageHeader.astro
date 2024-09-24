@@ -1,7 +1,7 @@
 ---
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 const { page_data } = Astro.props || {};
-const { title, index_title, page_title, slug, content } = page_data || {};
+const { title, subtitle, index_title, page_title, slug, content } = page_data || {};
 ---
 
 <div class="text-center">
@@ -48,6 +48,8 @@ const { title, index_title, page_title, slug, content } = page_data || {};
     )}
   />
   <p set:html={markdownify(content)} />
+
+  <p class="text-center mt-6 p-0 lg:mx-44 xl:mx-44 2xl:mx-44 lg:text-md lg:w-8/12 xl:w-8/12 2xl:w-8/12">{subtitle}</p>
 
   {
     page_data.buttons && (
