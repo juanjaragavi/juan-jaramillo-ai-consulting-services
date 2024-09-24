@@ -5,7 +5,7 @@ banner:
   image: /images/banner-img.png
   button:
     label: Schedule a Free Consultation
-    link: "https://themefisher.com/astro-themes/pinwheel-astro"
+    link: "/schedule"
     enable: true
 
 ##key features

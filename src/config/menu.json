@@ -11,7 +11,8 @@
     {
       "name": "Services",
       "url": "/services"
-    },{
+    },
+    {
       "name": "Industries",
       "url": "/industries"
     },
@@ -20,64 +21,34 @@
       "url": "/blog"
     },
     {
-      "name": "Features",
-      "url": "/features"
-    },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Integrations",
-          "url": "/integrations"
-        },
-
-        {
-          "name": "Pricing",
-          "url": "/pricing"
-        },
-        {
-          "name": "Sign In",
-          "url": "/signin"
-        },
-
-        {
-          "name": "Elements",
-          "url": "/elements"
-        },
-        {
-          "name": "Changelog",
-          "url": "/changelog"
-        },
-        {
-          "name": "Terms And Conditions",
-          "url": "/terms-and-conditions"
-        }
-      ]
-    },
-    {
       "name": "Contact",
       "url": "/contact"
     }
   ],
-
   "footer": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
     {
       "name": "About",
       "url": "/about"
     },
     {
+      "name": "Services",
+      "url": "/services"
+    },
+    {
+      "name": "Industries",
+      "url": "/industries"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Changelog",
-      "url": "/changelog"
     }
   ]
 }

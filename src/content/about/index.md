@@ -58,7 +58,7 @@ features:
   titleWorks: Our Approach to AI Consulting
   button:
     label: Schedule a Free Consultation
-    link: "https://themefisher.com/astro-themes/pinwheel-astro"
+    link: "/schedule"
     enable: true
   features_list:
     - title: Understand

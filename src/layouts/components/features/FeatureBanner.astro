@@ -42,22 +42,16 @@ const {
         <p class="mt-6">
           {banner.content}
         </p>
-        {
-          banner.button.enable && (
-            <a class="btn btn-primary mt-6" href={banner.button.link}>
-              {banner.button.label}
-            </a>
-          )
-        }
       </div>
       <div class="lg:col-6 lg:order-2">
-        <Image
-          class="mx-auto"
-          src="/images/features-banner-img.png"
-          width={412}
-          height={483}
-          alt=""
-        />
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <iframe
+          class="bg-white rounded-xl border border-gray-300"
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2UBV6tOwbDw-LRuYENSVjDXNgFwk5isyLpkDD73rQ03zrKxG12PXOJosrBtf_4lyDzDpbKc3uK?gv=true"
+          style="border: 0"
+          width="100%"
+          height="600"></iframe>
+        <!-- end Google Calendar Appointment Scheduling -->
       </div>
     </div>
   </div>
