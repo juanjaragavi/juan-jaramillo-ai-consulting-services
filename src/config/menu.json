@@ -17,10 +17,6 @@
       "url": "/industries"
     },
     {
-      "name": "Blog",
-      "url": "/blog"
-    },
-    {
       "name": "Contact",
       "url": "/contact"
     }
@@ -41,10 +37,6 @@
     {
       "name": "Industries",
       "url": "/industries"
-    },
-    {
-      "name": "Blog",
-      "url": "/blog"
     },
     {
       "name": "Contact",
