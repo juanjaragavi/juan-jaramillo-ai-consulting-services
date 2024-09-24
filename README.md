@@ -52,7 +52,7 @@ Explore how we've transformed businesses across various sectors:
 
 - [Website](https://juanjaramillo.ai)
 - [LinkedIn](https://www.linkedin.com/in/juan-jaramillo-ai/)
-- [Twitter](https://twitter.com/juanjaramilloai)
+- [Get to know Juan Jaramillo](https://juanjaramillo.tech)
 
 ## 📞 Start Your AI Journey Today
 
@@ -60,4 +60,4 @@ Ready to revolutionize your business with AI? Visit our [Contact Page](https://j
 
 ---
 
-© 2023 Juan Jaramillo AI Consulting Services. All rights reserved.
+© 2024 Juan Jaramillo AI Consulting Services. All rights reserved.
