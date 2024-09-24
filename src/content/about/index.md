@@ -43,7 +43,7 @@ our_works:
     subtitle: Juan Jaramillo is an accomplished expert in artificial intelligence and machine learning with 17 years of experience in spearheading digital and technological initiatives.
     image: "/images/how-it-work/image-1.png"
     list:
-      - 16+ years of experience in AI and machine learning
+      - 17+ years of experience in AI and machine learning
       - Expertise in Generative AI, NLP, and computer vision
       - Collaborations with industry giants such as Coca-Cola FEMSA, Grupo Herdez, and El Corte Inglés
       - Co-founder of TRADEBOG, an innovative startup in the wellness industry
@@ -99,4 +99,4 @@ members:
       field: Software Engineer
       image: "/images/users/user-3.png"
 ---
-Founded in 2024 by Juan Jaramillo, an AI expert with 16+ years of experience, Juan Jaramillo AI Consulting Services leads in providing Generative AI solutions across industries.
+Founded in 2024 by Juan Jaramillo, an AI expert with 17+ years of experience, Juan Jaramillo AI Consulting Services leads in providing Generative AI solutions across industries.
