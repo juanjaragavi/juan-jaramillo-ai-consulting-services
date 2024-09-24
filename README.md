@@ -17,7 +17,7 @@
 
 ## 🚀 About Juan Jaramillo AI Consulting Services
 
-Juan Jaramillo AI Consulting Services is your partner in harnessing the power of Artificial Intelligence to drive innovation, efficiency, and growth for your business. With over 16 years of experience in AI and machine learning, we offer tailored solutions across various industries.
+Juan Jaramillo AI Consulting Services is your partner in harnessing the power of Artificial Intelligence to drive innovation, efficiency, and growth for your business. With over 17 years of experience in AI and machine learning, we offer tailored solutions across various industries.
 
 ## 📌 Key Features of Our Services
 
