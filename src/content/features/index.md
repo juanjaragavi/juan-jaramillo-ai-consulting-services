@@ -1,8 +1,8 @@
 ---
 title: Schedule
 banner:
-  title: Connects with all your other tools to create a smooth experience.
-  content: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta.
+  title: Transform Your Business with AI Expertise. Let's talk.
+  content: Schedule a free consultation to explore how our tailored AI solutions can drive innovation, efficiency, and growth for your company. Let's turn your AI vision into reality.
   image: "/images/features-banner-img.png"
   button:
     label: Schedule a Free Consultation

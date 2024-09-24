@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 const {
   features: { title, banner },
 } = Astro.props;
@@ -10,7 +8,7 @@ const {
   <div class="container">
     <div class="row">
       <div
-        class="mb-14 text-center lg:col-6 lg:order-1 lg:mb-0 lg:mt-0 lg:text-left"
+        class="mb-14 text-center lg:mb-0 lg:text-center xl:text-center 2xl:text-center"
       >
         <ul
           class="breadcrumb mb-8 inline-flex h-8 items-center justify-center space-x-2 rounded-3xl bg-theme-light px-4 py-2"
@@ -36,22 +34,20 @@ const {
             <span class="text-sm leading-none">/ {title}</span>
           </li>
         </ul>
-        <h1>
+        <h1 class="text-center">
           {banner.title}
         </h1>
-        <p class="mt-6">
+        <p class="my-6 text-center">
           {banner.content}
         </p>
       </div>
-      <div class="lg:col-6 lg:order-2">
-        <!-- Google Calendar Appointment Scheduling begin -->
+      <div>
         <iframe
-          class="bg-white rounded-xl border border-gray-300"
+          class="bg-transparent"
           src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2UBV6tOwbDw-LRuYENSVjDXNgFwk5isyLpkDD73rQ03zrKxG12PXOJosrBtf_4lyDzDpbKc3uK?gv=true"
           style="border: 0"
           width="100%"
-          height="600"></iframe>
-        <!-- end Google Calendar Appointment Scheduling -->
+          height="1200"></iframe>
       </div>
     </div>
   </div>
