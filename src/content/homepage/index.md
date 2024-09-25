@@ -53,15 +53,15 @@ service:
     description: Explore how our cutting-edge AI solutions have revolutionized businesses across various sectors, delivering measurable results and driving innovation.
     tab_list:
         - title: Revolutionizing Fintech with AI-Driven Fraud Detection
-          icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
+          icon: "shield"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/sells-by-country.png"
           description: Learn how we helped a leading fintech company reduce fraud by 75% using our advanced AI algorithms.
         - title: Transforming E-commerce with Personalized Recommendations
-          icon: "clock"  #icon package react-feather-icon [https://feathericons.com/]
+          icon: "shoppingCart"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/collaboration.png"
           description: Discover how our AI-powered recommendation engine increased sales by 40% for a major online retailer.
         - title: Optimizing Healthcare with Predictive Analytics
-          icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
+          icon: "activity"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/healthcare.png"
           description: See how our AI solutions improved patient outcomes and reduced costs for a nationwide hospital network.
 
