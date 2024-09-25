@@ -307,25 +307,25 @@ select:invalid {
 
   @keyframes shadow-pulse {
     0% {
-      box-shadow: 0 0 0 0px rgba(254, 96, 25, 0.7);
+      box-shadow: 0 0 0 0px rgba(147, 112, 219, 0.7); // Purple with opacity
     }
     70% {
-      box-shadow: 0 0 0 35px rgba(254, 96, 25, 0);
+      box-shadow: 0 0 0 35px rgba(147, 112, 219, 0);
     }
     100% {
-      box-shadow: 0 0 0 0 rgba(254, 96, 25, 0);
+      box-shadow: 0 0 0 0 rgba(147, 112, 219, 0);
     }
   }
 
   @keyframes shadow-pulse-2 {
     0% {
-      box-shadow: 0 0 0 0px rgba(254, 96, 25, 0.7);
+      box-shadow: 0 0 0 0px rgba(0, 206, 209, 0.7); // Blue with opacity
     }
     70% {
-      box-shadow: 0 0 0 20px rgba(254, 96, 25, 0);
+      box-shadow: 0 0 0 20px rgba(0, 206, 209, 0);
     }
     100% {
-      box-shadow: 0 0 0 0 rgba(254, 96, 25, 0);
+      box-shadow: 0 0 0 0 rgba(0, 206, 209, 0);
     }
   }
 }
