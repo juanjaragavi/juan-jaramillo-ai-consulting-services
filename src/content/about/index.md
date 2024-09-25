@@ -41,7 +41,7 @@ gallery:
 our_works:
   - title: "Meet Our Founder: Juan Jaramillo"
     subtitle: Juan Jaramillo is an accomplished expert in artificial intelligence and machine learning with 17 years of experience in spearheading digital and technological initiatives.
-    image: "/images/how-it-work/image-1.png"
+    image: "/images/our-founder.png"
     list:
       - 17+ years of experience in AI and machine learning
       - Expertise in Generative AI, NLP, and computer vision
