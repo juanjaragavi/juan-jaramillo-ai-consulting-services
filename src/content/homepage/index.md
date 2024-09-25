@@ -92,30 +92,30 @@ testimonial:
       avatar: "/images/users/user-5.png"
       organization: CEO | ZIONE Shop
       rating: five
-      content: Juan and his team's expertise in AI has been game-changing for our business. Their tailored solutions have dramatically improved our efficiency and decision-making processes.
+      content: Juan's AI wizardry is so impressive, I'm convinced he's secretly an AI himself! But don't quote me on that... at least not until I send him a proper testimonial. His solutions are like magic, but legal and with better ROI.
     - author: Ulrik G. Hansen
       avatar: "/images/users/user-1.png"
       organization: CEO | Marstals Latam
       rating: five
-      content: Juan's AI-driven process automation solution has been a game-changer for our manufacturing operations. We've increased productivity by 25% and reduced errors by 80%. His deep understanding of both AI and industry-specific challenges sets him apart.
+      content: Juan's AI solutions are so effective, I'm worried our machines might stage a coup. Productivity up 25%? More like 250%! Okay, maybe that's an exaggeration, but I'll give you the real numbers once I stop being amazed by the results.
     - author: Miguel Johns
       avatar: "/images/users/user-6.png"
       organization: CEO | moment*
       rating: five
-      content: The GenAI strategy developed by Juan Jaramillo AI Consulting Services has given us a significant competitive edge in our industry. Their innovative approach and deep understanding of our needs exceeded our expectations.
+      content: The GenAI strategy from Juan was so mind-blowing, I forgot to give him a testimonial. If you're reading this, Juan, I promise to send you something less ridiculous soon. Until then, just know that you've given us a competitive edge sharper than my wit in this placeholder.
     - author: Alex Dillon
       avatar: "/images/users/user-2.png"
       organization: CEO | TechAID Solutions
       rating: five
-      content: Juan's AI-driven process automation solution has been a game-changer for our manufacturing operations. We've increased productivity by 25% and reduced errors by 80%. His deep understanding of both AI and industry-specific challenges sets him apart.
+      content: Juan's AI solutions are so advanced, I'm half expecting our office coffee machine to start giving financial advice. If this testimonial seems a bit off, it's because the real one is still computing in my AI-enhanced brain. Stay tuned for a less caffeinated version soon!
     - author: Khaterine Hernandez
       avatar: "/images/users/user-3.png"
       organization: Project Manager | Fundación Telefónica Movistar
       rating: five
-      content: Juan's AI solutions revolutionized our financial forecasting. We've seen a 40% improvement in prediction accuracy, leading to more informed decision-making and significant cost savings. His expertise in AI is truly unparalleled.
+      content: Juan's AI consulting is so good, I'm tempted to ask the AI for dating advice. But I'll stick to letting it revolutionize our tech stack for now. Real testimonial coming soon, once I figure out how to put 'mind-blowingly awesome' in professional terms.
     - author: Cindy Ojeda
       avatar: "/images/users/user-4.png"
       organization: Teacher | Universidad Francisco Marroquín
       rating: five
-      content: Implementing Juan's custom NLP model transformed our customer service. We've reduced response times by 60% and increased customer satisfaction scores by 35%. His ability to tailor AI to our specific needs was impressive.
+      content: Working with Juan is like having a time machine - we're solving tomorrow's problems today. If this sounds too sci-fi, don't worry; I promise to send a more down-to-earth testimonial once I return from the future Juan's AI has apparently sent us to.
 ---
