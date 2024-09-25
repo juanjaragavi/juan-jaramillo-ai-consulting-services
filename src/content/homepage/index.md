@@ -62,7 +62,7 @@ service:
           description: Discover how our AI-powered recommendation engine increased sales by 40% for a major online retailer.
         - title: Optimizing Healthcare with Predictive Analytics
           icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/sells-by-country.png"
+          image: "/images/healthcare.png"
           description: See how our AI solutions improved patient outcomes and reduced costs for a nationwide hospital network.
 
   our_service:
