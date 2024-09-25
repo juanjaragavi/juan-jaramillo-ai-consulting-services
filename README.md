@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/contributors/themefisher/bigspring-light-astro" alt="contributors"></a>
 </p>
 
-![pinwheel](https://demo.themefisher.com/thumbnails/pinwheel.png)
+![pinwheel](https://media.myparcero.com/website-screenshot.webp)
 
 ## 🚀 About Juan Jaramillo AI Consulting Services
 
