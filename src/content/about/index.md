@@ -6,7 +6,7 @@ buttons:
     link: "contact"
     enable: true
   - label: Learn More
-    link: "#"
+    link: "#approach"
     outline: true
     enable: true
 
