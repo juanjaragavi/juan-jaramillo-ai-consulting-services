@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy - Juan Jaramillo AI Consulting Services (JJAICS)"
-excerpt: These Terms and Conditions govern your use of the Juan Jaramillo AI Consulting Services (JJAICS) website and the services we provide. By accessing our website or using our services, you agree to be bound by these Terms and Conditions. If you disagree with any part of these terms, please do not use our website or services.
+excerpt: Juan Jaramillo AI Consulting Services (hereinafter referred to as "JJAICS," "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website <https://juanjaramillo.ai> (the "Site") or use our AI consulting services. <br /> We adhere to Colombian data protection laws, including Law 1581 of 2012 and Decree 1377 of 2013, which regulate the protection of personal data. By using our Site or services, you consent to the data practices described in this policy.
 draft: false
 ---
 ## 1. Introduction
