@@ -41,6 +41,10 @@
     {
       "name": "Contact",
       "url": "/contact"
+    },
+    {
+      "name": "Terms and Conditions",
+      "url": "/terms-and-conditions"
     }
   ]
 }

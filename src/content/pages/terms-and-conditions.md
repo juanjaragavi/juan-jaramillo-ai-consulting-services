@@ -1,41 +1,101 @@
 ---
-title: "Terms & Condition Of Pinwheel"
-excerpt: Donec sollicitudin molestie malesda. Donec sollitudin molestie male <br /> suada Mauris pellentesque nec egestas non nisi Cras
+title: "Terms and Conditions - Juan Jaramillo AI Consulting Services (JJAICS)"
+excerpt: These Terms and Conditions govern your use of the Juan Jaramillo AI Consulting Services (JJAICS) website and the services we provide. By accessing our website or using our services, you agree to be bound by these Terms and Conditions. If you disagree with any part of these terms, please do not use our website or services.
 draft: false
 ---
 
-### 1. Definitions
+## 1. Introduction
 
-We collect certain identifying personal data when you sign up to our Service such as your name, email address, PayPal address (if different from email address), and telephone number. The personal data we collect from you is disclosed only in accordance with our Terms of Service and/or this Privacy Policy.Conclude collects Slack account and access information from Users for the purposes of connecting to the Slack API and to authenticate access to information on the Conclude website. Whenever you visit our Site, we may collect non-identifying information from you, such as referring URL, browser, operating system, cookie information, and Internet Service Provider. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, this information alone cannot usually be used to identify you.The term "personal data" does not include any anonymized and aggregated data made on the basis of personal data, which are wholly owned by Conclude.
+These Terms and Conditions govern your use of the Juan Jaramillo AI Consulting Services (JJAICS) website and the services we provide. By accessing our website or using our services, you agree to be bound by these Terms and Conditions. If you disagree with any part of these terms, please do not use our website or services.
 
-### 2. General Terms
+## 2. Definitions
 
-#### Service Provided AS IS
+- "Company," "we," "us," or "our" refers to Juan Jaramillo AI Consulting Services (JJAICS), a company registered in Colombia.
+- "Website" refers to <https://juanjaramillo.ai> and all associated subdomains.
+- "Services" refers to the AI consulting services, including but not limited to strategy development, implementation, and training, provided by JJAICS.
+- "Client," "you," or "your" refers to the individual or entity accessing our website or using our services.
 
-The Service is provided for free during this pilot project, and is provided "as is" with no warranty. Conclude will provide User support for the Service, however; Conclude is not committed to any level of service or availability of the Service. A further description of the Service and our user support is available at the Site.
+## 3. Use of Website
 
-#### Interoperation with Slack
+### 3.1 Content
 
-The Service interoperates with Slack.com, and depends on the continuing availability and access to Slack. If for any reason Conclude cannot access or use Slack (including without limitation, change in terms or increase in fees charged by Slack), Conclude may not be able to provide all of the functions of its Service. No refund or credit, if applicable, will be provided for temporary unavailability of Slack (for example, maintenance windows).
+The content on our website is for general information purposes only. While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the website or the information, products, services, or related graphics contained on the website for any purpose.
 
-#### Company Liability
+### 3.2 Intellectual Property
 
-If you enter into this agreement on behalf of a company, you hereby agree that the company is responsible under this Agreement for all actions and omissions conducted by its designated users of the Service.
+The content, design, and graphics on this website are the intellectual property of JJAICS and are protected by Colombian and international copyright laws. You may not reproduce, distribute, modify, or create derivative works from any material on this website without our express written consent.
 
-### 4. Rules of Use
+### 3.3 Links to Third-Party Websites
 
-1. must keep passwords secure and confidential;
-2. are solely responsible for User Data and all activity in their account while using the Service;
-3. must use commercially reasonable efforts to prevent unauthorized access to their account, and notify Conclude promptly of any such unauthorized access; and
-4. may use the Service only in accordance with Conclude's online user guide and all applicable laws and regulations.
+Our website may contain links to third-party websites. These links are provided for your convenience only. We have no control over the content of these sites and accept no responsibility for them or for any loss or damage that may arise from your use of them.
 
-#### You must not
+## 4. Services
 
-- Enhance or improve User experience, our Site, or our Service.
-- Process transactions.
-- Send emails about our Site or respond to inquiries.
-- As this Privacy Policy and our Terms of Service.
+### 4.1 Scope of Services
 
-### 5. Intellectual Property Rights
+JJAICS provides AI consulting services, including but not limited to AI strategy development, implementation support, and training. The specific scope of services will be defined in individual agreements with clients.
 
-Your information may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the privacy laws may not be as protective as those in your jurisdiction. If you choose to provide information to us, Conclude transfers Personal Information to Google Cloud Platform and processes it there. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
+### 4.2 Service Delivery
+
+We will use reasonable efforts to ensure that our services are provided with due care and skill. However, due to the nature of AI and technology consulting, we cannot guarantee specific outcomes or results.
+
+### 4.3 Client Responsibilities
+
+Clients are responsible for providing accurate and complete information necessary for the provision of our services. Failure to do so may result in delays or inability to provide the agreed-upon services.
+
+## 5. Confidentiality and Data Protection
+
+### 5.1 Confidentiality
+
+We will maintain the confidentiality of all client information and data provided to us in the course of our services. We will not disclose this information to third parties without your express consent, except as required by law or as necessary to provide our services.
+
+### 5.2 Data Protection
+
+JJAICS complies with Colombian data protection laws, including Law 1581 of 2012 and Decree 1377 of 2013. We will process personal data in accordance with our Privacy Policy, which is available on our website.
+
+## 6. Payments and Fees
+
+### 6.1 Fees
+
+Our fees for services will be agreed upon in writing before the commencement of any work. All fees are quoted in Colombian Pesos (COP) unless otherwise specified.
+
+### 6.2 Payment Terms
+
+Invoices are due within 30 days of the invoice date, unless otherwise agreed in writing. Late payments may be subject to interest charges at the maximum rate permitted by Colombian law.
+
+### 6.3 Taxes
+
+All fees are exclusive of applicable taxes, including but not limited to Value Added Tax (VAT). Clients are responsible for paying all applicable taxes.
+
+## 7. Limitation of Liability
+
+To the fullest extent permitted by Colombian law, JJAICS shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:
+
+a) Your use or inability to use our website or services
+b) Any unauthorized access to or use of our servers and/or any personal information stored therein
+c) Any interruption or cessation of transmission to or from our website
+d) Any bugs, viruses, trojan horses, or the like that may be transmitted to or through our website by any third party
+
+## 8. Termination
+
+We may terminate or suspend access to our website and services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms and Conditions.
+
+## 9. Governing Law and Jurisdiction
+
+These Terms and Conditions shall be governed by and construed in accordance with the laws of Colombia. Any disputes arising under or in connection with these Terms and Conditions shall be subject to the exclusive jurisdiction of the courts of Bogotá, Colombia.
+
+## 10. Changes to Terms and Conditions
+
+We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to our website. Your continued use of our website and services after any changes indicates your acceptance of the new Terms and Conditions.
+
+## 11. Contact Information
+
+If you have any questions about these Terms and Conditions, please contact us at:
+
+Juan Jaramillo AI Consulting Services (JJAICS)
+Email: [hola@juanjaramillo.ai](mailto:hola@juanjaramillo.ai)
+Address: Cll. 7D # 43 A 40 Piso 8. Medellín, Colombia, 50001
+
+---
+
+Last updated: Wed. 25 Sept. 17:17:44
