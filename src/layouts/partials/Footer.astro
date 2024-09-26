@@ -1,10 +1,10 @@
 ---
-import Logo from "@/components/Logo.astro";
 import Social from "@/components/Social.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
 const { footer } = menu;
 const { copyright, location, email, phone, footer_description } = config.params;
 ---
@@ -13,8 +13,14 @@ const { copyright, location, email, phone, footer_description } = config.params;
   <div class="container">
     <div class="gx-5 row pb-10 pt-[52px]">
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <Logo />
-        <p class="mt-6">
+        <Image
+            src="/images/logo-footer.png"
+            alt="Juan Jaramillo AI Consulting Services (JJAICS)"
+            height={200}
+            width={200}
+            class="w-full"
+          />
+        <p class="mt-4">
           {footer_description}
         </p>
       </div>
