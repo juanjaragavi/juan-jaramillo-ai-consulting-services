@@ -1,0 +1,70 @@
+---
+
+---
+
+<!-- https://www.youtube.com/watch?v=TUvpL_Hx0is&list=PLcKa-34z76PsSEdo5Z95cphFx1isagCCO&index=1 -->
+<section class="-top-14 section banner relative overflow-hidden">
+  <div class="video-background">
+    <iframe
+      src="https://www.youtube.com/embed/zwUsFN__jtE?autoplay=1&mute=1&loop=1&playlist=zwUsFN__jtE&controls=0&showinfo=0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+  </div>
+  <div class="container relative z-10">
+    <div class="row justify-center">
+      <div class="lg:col-10 text-center">
+        <h1 class="banner-title text-white">
+          Revolutionize Your Business with </br> Cutting-Edge AI Solutions
+        </h1>
+        <p class="mt-6 leading-6 text-white">
+          Harness the Power of Generative AI </br> to Drive Innovation, Efficiency,
+          and Growth
+        </p>
+        <a class="text-xl lg:text-xl pt-3 xl:pt-3 btn btn-white mt-8" href="/schedule">
+          Schedule A Free Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .banner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .video-background iframe {
+    width: 100vw;
+    height: 56.25vw; /* 16:9 aspect ratio */
+    min-height: 100vh;
+    min-width: 177.77vh; /* 16:9 aspect ratio */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
