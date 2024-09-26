@@ -24,6 +24,6 @@
     "**/*.tsx",
     "**/*.astro",
     "src/layouts/shortcodes/Tabs.jsx"
-, "src/chat/ChatUI.jsx"  ],
+, "src/chat/ChatUI.jsx", "src/pages/components/CookieConsent.jsx"  ],
   "exclude": ["node_modules"]
 }

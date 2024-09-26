@@ -6,6 +6,7 @@ import Testimonial from "@/layouts/components/Testimonial.astro";
 import Service from "@/layouts/components/Service.astro";
 import Cta from "@/layouts/partials/Cta.astro";
 import { getEntryBySlug } from "astro:content";
+import CookieConsent from "../pages/components/CookieConsent"
 
 const homepage = await getEntryBySlug("homepage", "index");
 const { banner, key_features, service, testimonial } = homepage.data;
@@ -22,4 +23,5 @@ const { banner, key_features, service, testimonial } = homepage.data;
   <Testimonial testimonial={testimonial} />
   <!-- call to action -->
   <Cta />
+  <CookieConsent client:load />
 </Base>
