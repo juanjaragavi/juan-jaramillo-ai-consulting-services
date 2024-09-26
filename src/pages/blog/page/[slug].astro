@@ -7,7 +7,7 @@ import Base from "@/layouts/Base.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
-import { getEntryBySlug } from "astro:content";
+import { getEntry } from "astro:content";
 import type { TIndexData } from "@/types";
 
 export async function getStaticPaths() {
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
   }
   return paths;
 }
-const blogIndex = (await getEntryBySlug<any, string>(
+const blogIndex = (await getEntry<any, string>(
   config.settings.blog_folder,
   "-index",
 )) as TIndexData;

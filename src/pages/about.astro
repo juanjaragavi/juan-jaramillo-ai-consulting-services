@@ -6,10 +6,10 @@ import Gallery from "@/components/about/Gallery.astro";
 import Works from "@/components/about/Works.astro";
 import Base from "@/layouts/Base.astro";
 import Cta from "@/layouts/partials/Cta.astro";
-import { getEntryBySlug } from "astro:content";
+import { getEntry } from "astro:content";
 import { AiFillCheckCircle } from "react-icons/ai";
 
-const about = await getEntryBySlug("about", "index");
+const about = await getEntry("about", "index");
 const { our_works, gallery, features } = about.data;
 const page_data = {
   ...about.data,

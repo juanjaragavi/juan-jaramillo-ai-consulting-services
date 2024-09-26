@@ -4,9 +4,9 @@ import Shape from "@/components/Shape.astro";
 import Base from "@/layouts/Base.astro";
 import Faq from "@/layouts/function-components/Faq.jsx";
 import PricingCard from "@/layouts/function-components/PricingCard.jsx";
-import { getEntryBySlug } from "astro:content";
+import { getEntry } from "astro:content";
 
-const pricing = await getEntryBySlug("pricing", "index");
+const pricing = await getEntry("pricing", "index");
 const page_data = {
   ...pricing.data,
   content: pricing.body,

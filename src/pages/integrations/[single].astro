@@ -5,9 +5,9 @@ import Shape from "@/components/Shape.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { humanize, markdownify } from "@/lib/utils/textConverter";
-import { getEntryBySlug } from "astro:content";
+import { getEntry } from "astro:content";
 import type { TIntegrationsIndex } from "@/types";
-const integraionsIndex = (await getEntryBySlug<any, string>(
+const integraionsIndex = (await getEntry<any, string>(
   "integrations",
   "-index",
 )) as TIntegrationsIndex;
