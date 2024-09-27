@@ -6,7 +6,7 @@ import Testimonial from "@/layouts/components/Testimonial.astro";
 import Service from "@/layouts/components/Service.astro";
 import Cta from "@/layouts/partials/Cta.astro";
 import { getEntry } from "astro:content";
-import CookieConsent from "../pages/components/CookieConsent"
+import CookieConsent from "../pages/components/CookieConsent";
 
 const homepage = await getEntry("homepage", "index");
 const { banner, key_features, service, testimonial } = homepage.data;
