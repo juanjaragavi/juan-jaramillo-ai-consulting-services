@@ -34,7 +34,7 @@ const page_data = {
     <div class="container">
       <div class="row">
         <div
-          class="mb-14 text-center lg:mb-0 lg:text-center xl:text-center 2xl:text-center"
+          class="mb-4 text-center lg:mb-0 lg:text-center xl:text-center 2xl:text-center"
         >
           <ul
             class="breadcrumb mb-8 inline-flex h-8 items-center justify-center space-x-2 rounded-3xl bg-theme-light px-4 py-2"
@@ -63,7 +63,7 @@ const page_data = {
             src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2UBV6tOwbDw-LRuYENSVjDXNgFwk5isyLpkDD73rQ03zrKxG12PXOJosrBtf_4lyDzDpbKc3uK?gv=true"
             style="border: 0"
             width="100%"
-            height="1200"></iframe>
+            height="1170"></iframe>
         </div>
       </div>
     </div>
@@ -121,25 +121,25 @@ const page_data = {
               />
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="eamil">Email Adrdess</label>
+              <label class="form-label" for="eamil">Email Address</label>
               <input
                 class="form-control"
                 type="text"
                 id="email"
-                placeholder="Your  Email Address"
+                placeholder="Your Email Address"
               />
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="reason">Reason/Purpose</label>
+              <label class="form-label" for="reason">What can we help you with?</label>
               <select name="reason" id="reason" class="form-select" required>
-                <option value="">Select reason/purpose</option>
-                <option value="investment plane">Investment Plan</option>
-                <option value="investment plane-2">Investment Plan 2</option>
-                <option value="investment plane-3">Investment Plan 3</option>
+                <option value="">Select One Option</option>
+                <option value="investment plane">I Need More Information.</option>
+                <option value="investment plane-2">I'm Looking For a More Personalized Service.</option>
+                <option value="investment plane-3">We'd like to be Contacted.</option>
               </select>
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="message">Message Here</label>
+              <label class="form-label" for="message">Input a Message or Comment (optional)</label>
               <textarea
                 class="form-control h-[150px]"
                 id="message"
@@ -156,6 +156,6 @@ const page_data = {
       </div>
     </div>
   </section>
-  <CookieConsent client:load />
   <Cta />
+  <CookieConsent client:load />
 </Base>
