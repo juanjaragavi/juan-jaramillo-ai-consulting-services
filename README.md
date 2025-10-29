@@ -1,5 +1,5 @@
 <h1 align=center>Juan Jaramillo AI Consulting Services</h1>
-<p align=center><img src="https://media.myparcero.com/2-logo_blanco.png" alt="Juan Jaramillo AI Consulting Services" /></p>
+<p align=center><img src="/images/services/2-logo_blanco.png" alt="Juan Jaramillo AI Consulting Services" /></p>
 <p align=center>Empowering businesses with cutting-edge AI solutions tailored for your industry needs.</p>
 <h2 align="center"><a target="_blank" href="https://juanjaramillo.ai" rel="nofollow"> 👀 Visit Our Website</a> | <a  target="_blank" href="https://juanjaramillo.ai/contact"> Chat With Our AI 🤖 </a>
 </h2>
@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/github/contributors/themefisher/bigspring-light-astro" alt="contributors"></a>
 </p>
 
-![pinwheel](https://media.myparcero.com/website-screenshot.webp)
+![pinwheel](/images/services/website-screenshot.webp)
 
 ## 🚀 About Juan Jaramillo AI Consulting Services
 
