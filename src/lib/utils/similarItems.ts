@@ -1,36 +1,31 @@
 // similer products
-const similerItems = (currentItem: any, allItems: any, slug: string) => {
-  let categories: [] = [];
-  let tags: [] = [];
+type ItemWithCategories = {
+  slug: string;
+  data: {
+    categories?: string[];
+  };
+};
 
-  // set categories
-  if (currentItem.data.categories.length > 0) {
-    categories = currentItem.data.categories;
-  }
+const similerItems = <T extends ItemWithCategories>(
+  currentItem: T,
+  allItems: T[],
+  slug: string,
+) => {
+  const categories = Array.isArray(currentItem.data.categories)
+    ? currentItem.data.categories
+    : [];
 
-  // // set tags
-  // if (currentItem.data.tags.length > 0) {
-  //   tags = currentItem.data.tags;
-  // }
+  const itemsByCategory = allItems.filter((item) => {
+    if (!Array.isArray(item.data.categories)) {
+      return false;
+    }
 
-  // filter by categories
-  const filterByCategories = allItems.filter(
-    (item: { data: { categories: string } }) =>
-      categories.find((category) => item.data.categories.includes(category))
-  );
+    return categories.some((category) =>
+      item.data.categories?.includes(category),
+    );
+  });
 
-  // // filter by tags
-  // const filterByTags = allItems.filter((item: { data: { tags: string } }) =>
-  //   tags.find((tag) => item.data.tags.includes(tag))
-  // );
-
-  // merged after filter
-  const mergedItems = [...new Set([filterByCategories])];
-
-  // filter by slug
-  const filterBySlug = mergedItems.filter((product) => product.slug !== slug);
-
-  return filterBySlug;
+  return itemsByCategory.filter((item) => item.slug !== slug);
 };
 
 export default similerItems;

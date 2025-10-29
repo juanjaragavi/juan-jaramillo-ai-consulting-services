@@ -5,16 +5,32 @@ import Shape from "@/components/Shape.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { humanize, markdownify } from "@/lib/utils/textConverter";
-import { getEntry } from "astro:content";
-import type { TIntegrationsIndex } from "@/types";
-const integraionsIndex = (await getEntry<any, string>(
-  "integrations",
-  "-index",
-)) as TIntegrationsIndex;
+import { getEntry, type CollectionEntry } from "astro:content";
+
+type IntegrationEntry = CollectionEntry<"integrations">;
+
+type IntegrationFrontmatter = {
+  title?: string;
+  meta_title?: string;
+  description?: string;
+  image?: string;
+  excerpt?: string;
+  name?: string;
+  button?: {
+    label?: string;
+    link?: string;
+  };
+};
+
+const integrationsIndex = await getEntry("integrations", "-index");
+
+if (!integrationsIndex) {
+  throw new Error("Integrations index content is missing");
+}
 
 export async function getStaticPaths() {
   const integrations = await getSinglePage("integrations");
-  const paths = integrations.map((post: any) => ({
+  const paths = integrations.map((post) => ({
     params: {
       single: post.slug,
     },
@@ -22,12 +38,34 @@ export async function getStaticPaths() {
   }));
   return paths;
 }
-const { post } = Astro.props;
+const { post } = Astro.props as { post: IntegrationEntry };
 
 const { Content } = await post.render();
+
+const integrationData = post.data as IntegrationFrontmatter;
+const imageSrc =
+  typeof integrationData.image === "string" ? integrationData.image : undefined;
+const excerpt =
+  typeof integrationData.excerpt === "string" ? integrationData.excerpt : "";
+const button =
+  integrationData.button && typeof integrationData.button === "object"
+    ? {
+        label:
+          typeof integrationData.button.label === "string"
+            ? integrationData.button.label
+            : "",
+        link:
+          typeof integrationData.button.link === "string"
+            ? integrationData.button.link
+            : "",
+      }
+    : undefined;
+const integrationName =
+  typeof integrationData.name === "string" ? integrationData.name : "";
+
 const page_data = {
-  ...post.data,
-  index_title: integraionsIndex.data.title,
+  ...integrationData,
+  index_title: integrationsIndex.data.title,
   slug: post.slug,
 };
 ---
@@ -48,22 +86,35 @@ const page_data = {
   </section>
   <section class="section career-single pt-0">
     <div class="container">
-      <div class="lg:gx-4 row">
+      <div class="row lg:gx-4">
         <div class="mx-auto lg:col-8">
-          <div class="lg:py-[60px] rounded-xl bg-white p-7 shadow-lg lg:px-12">
+          <div class="rounded-xl bg-white p-7 shadow-lg lg:px-12 lg:py-[60px]">
             <div class="mb-8 px-4 text-center">
-              <Image
-                class="mx-auto"
-                src={post.data.image}
-                alt=""
-                height={80}
-                width={80}
-              />
+              {
+                imageSrc ? (
+                  <Image
+                    class="mx-auto"
+                    src={imageSrc}
+                    alt={integrationData.title ?? ""}
+                    height={80}
+                    width={80}
+                  />
+                ) : null
+              }
               <h1 class="mt-6">{post.data.title}</h1>
-              <p class="mt-6" set:html={markdownify(post.data.excerpt)} />
-              <a class="btn btn-primary mt-8 px-10" href={post.data.button.link}
-                >{humanize(post.data.button.label)}
-                {humanize(post.data.name)}</a
+              {
+                excerpt ? (
+                  <p class="mt-6" set:html={markdownify(excerpt)} />
+                ) : null
+              }
+              {
+                button && button.link ? (
+                  <a class="btn btn-primary mt-8 px-10" href={button.link}>
+                    {humanize(button.label)}
+                    {integrationName ? ` ${humanize(integrationName)}` : ""}
+                  </a>
+                ) : null
+              }
               >
             </div>
             <div class="content"><Content /></div>

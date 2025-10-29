@@ -7,11 +7,6 @@ const dateFormat = (datetime: string | Date) => {
     day: "numeric",
   });
 
-  const time = dateTime.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-
   return date;
 };
 

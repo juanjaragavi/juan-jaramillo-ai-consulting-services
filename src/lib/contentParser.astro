@@ -1,10 +1,14 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
+import type { CollectionKey } from "@/lib/collections";
 
-export const getSinglePage = async (collection: any) => {
-  const allPage = await getCollection(collection);
-  const removeIndex = allPage.filter((data) => data.id.match(/^(?!-)/));
-  const removeDrafts = removeIndex.filter((data) => !data.data.draft);
-  return removeDrafts;
+export const getSinglePage = async <C extends CollectionKey>(
+  collection: C,
+): Promise<CollectionEntry<C>[]> => {
+  const allPages = await getCollection(collection);
+
+  return allPages
+    .filter((entry) => !entry.id.startsWith("-"))
+    .filter((entry) => !entry.data.draft);
 };
 ---

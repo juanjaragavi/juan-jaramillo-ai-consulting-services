@@ -4,23 +4,50 @@ import PageHeader from "@/components/PageHeader.astro";
 import Shape from "@/components/Shape.astro";
 import Base from "@/layouts/Base.astro";
 import Cta from "@/layouts/partials/Cta.astro";
-import { getEntry } from "astro:content";
+import { getEntry, type CollectionEntry } from "astro:content";
 import { AiFillCheckCircle } from "react-icons/ai";
 import Accordion from "@/pages/components/accordion.mdx";
 
+type HowItWorksEntry = CollectionEntry<"how-it-works">;
+
 const how_it_works = await getEntry("how-it-works", "index");
-const { perfomance, our_works } = how_it_works.data;
+
+if (!how_it_works) {
+  throw new Error("How it works content is missing");
+}
+
+const data = how_it_works.data as HowItWorksEntry["data"] &
+  Record<string, unknown>;
+
+const perfomance = Array.isArray(data.perfomance)
+  ? (data.perfomance as Array<{
+      title?: string;
+      description?: string;
+      image?: string;
+    }>)
+  : [];
+const ourWorks = Array.isArray(data.our_works)
+  ? (data.our_works as Array<{
+      title?: string;
+      subtitle?: string;
+      image?: string;
+      list?: string[];
+    }>)
+  : [];
+
 const page_data = {
-  ...how_it_works.data,
+  ...data,
   content: how_it_works.body,
 };
 ---
 
 <Base
-  title={how_it_works.data.title}
-  meta_title={how_it_works.data.meta_title}
-  description={how_it_works.data.description}
-  image={how_it_works.data.image}
+  title={typeof data.title === "string" ? data.title : undefined}
+  meta_title={typeof data.meta_title === "string" ? data.meta_title : undefined}
+  description={typeof data.description === "string"
+    ? data.description
+    : undefined}
+  image={typeof data.image === "string" ? data.image : undefined}
 >
   <Shape />
   <section class="page-hero pb-14 pt-16">
@@ -31,7 +58,7 @@ const page_data = {
 
       <div class="row mt-14">
         {
-          perfomance.map((item: any, i: number) => (
+          perfomance.map((item, i) => (
             <div class="mt-10 text-center sm:col-6 md:col-4 md:mb-0">
               <div
                 class={`relative mx-auto mb-8 flex h-[184px] w-[184px] items-center justify-center rounded-xl bg-white p-4 shadow-lg ${
@@ -40,10 +67,12 @@ const page_data = {
                     : undefined
                 }`}
               >
-                <Image height={122} width={144} src={item.image} alt="" />
+                {item.image ? (
+                  <Image height={122} width={144} src={item.image} alt="" />
+                ) : null}
               </div>
               <h2 class="h5">{item.title}</h2>
-              <p class="mt-4">{item.description}</p>
+              {item.description ? <p class="mt-4">{item.description}</p> : null}
             </div>
           ))
         }
@@ -54,21 +83,23 @@ const page_data = {
   <section>
     <div class="container">
       {
-        our_works.map((item: any, index: number) => (
-          <div class="gx-5 row mt-16 items-center first:mt-12">
+        ourWorks.map((item, index) => (
+          <div class="row gx-5 mt-16 items-center first:mt-12">
             <div
               class={`lg:col-7 ${
                 index % 2 === 0 ? "lg:order-1" : "lg:order-0"
               }`}
             >
               <div class="relative">
-                <Image
-                  class="w-full object-contain"
-                  alt="service"
-                  width={473}
-                  height={286}
-                  src={item.image}
-                />
+                {item.image ? (
+                  <Image
+                    class="w-full object-contain"
+                    alt={item.title ?? "service"}
+                    width={473}
+                    height={286}
+                    src={item.image}
+                  />
+                ) : null}
               </div>
             </div>
             <div
@@ -78,12 +109,14 @@ const page_data = {
             >
               <div class="text-container">
                 <h2 class="lg:text-2xl">{item.title}</h2>
-                <p class="mt-6 lg:text-md">{item.subtitle}</p>
+                {item.subtitle ? (
+                  <p class="lg:text-md mt-6">{item.subtitle}</p>
+                ) : null}
                 <ul class="mt-6 text-dark lg:-ml-4">
-                  {item.list.map((list: any) => (
+                  {(item.list ?? []).map((listItem) => (
                     <li class="mb-2 flex items-center rounded px-4">
                       <AiFillCheckCircle className="mr-3 fill-primary text-white" />
-                      {list}
+                      {listItem}
                     </li>
                   ))}
                 </ul>

@@ -6,6 +6,10 @@ import Cta from "@/layouts/partials/Cta.astro";
 import { getEntry } from "astro:content";
 
 const features = await getEntry("features", "index");
+
+if (!features) {
+  throw new Error("Features content entry is missing");
+}
 ---
 
 <Base

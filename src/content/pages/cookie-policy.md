@@ -3,6 +3,7 @@ title: "Cookie Policy - Juan Jaramillo AI Consulting Services (JJAICS)"
 excerpt: This Cookie Policy explains how Juan Jaramillo AI Consulting Services ("JJAICS", "we", "us", or "our") uses cookies and similar technologies on our website <https://juanjaramillo.ai> (the "Website"). This policy is designed to help you understand what cookies are, how we use them, and the choices you have regarding their use.
 draft: false
 ---
+
 ## Introduction
 
 This Cookie Policy explains how Juan Jaramillo AI Consulting Services ("JJAICS", "we", "us", or "our") uses cookies and similar technologies on our website <https://juanjaramillo.ai> (the "Website"). This policy is designed to help you understand what cookies are, how we use them, and the choices you have regarding their use.

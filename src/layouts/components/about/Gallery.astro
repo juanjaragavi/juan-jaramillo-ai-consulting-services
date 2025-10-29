@@ -44,7 +44,7 @@ const { title, images } = gallery;
   const element = document.getElementById("photo-gallery");
   const sizer = element?.querySelector(".js-shuffle-sizer");
   if (element && sizer) {
-    const shuffleInstance = new Shuffle(element, {
+    new Shuffle(element, {
       itemSelector: ".picture-item",
       sizer: sizer as HTMLElement,
       columnWidth: 1,

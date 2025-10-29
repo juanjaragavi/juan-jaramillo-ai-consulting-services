@@ -6,9 +6,14 @@ import Testimonial from "@/layouts/components/Testimonial.astro";
 import Service from "@/layouts/components/Service.astro";
 import Cta from "@/layouts/partials/Cta.astro";
 import { getEntry } from "astro:content";
-import CookieConsent from "../pages/components/CookieConsent";
+import CookieConsent from "./components/_CookieConsent";
 
 const homepage = await getEntry("homepage", "index");
+
+if (!homepage) {
+  throw new Error("Homepage content entry is missing");
+}
+
 const { banner, key_features, service, testimonial } = homepage.data;
 ---
 

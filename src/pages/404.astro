@@ -3,10 +3,12 @@ import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
-import config from "@/config/config.json";
-
-const { logo } = config.site;
 const entry = await getEntry("pages", "404");
+
+if (!entry) {
+  throw new Error("404 page content entry not found");
+}
+
 const { Content } = await entry.render();
 ---
 

@@ -11,15 +11,15 @@ const { copyright, location, email, phone, footer_description } = config.params;
 
 <footer class="footer bg-[#F1F1F1]">
   <div class="container">
-    <div class="gx-5 row pb-10 pt-[52px]">
+    <div class="row gx-5 pb-10 pt-[52px]">
       <div class="col-12 mt-12 md:col-6 lg:col-3">
         <Image
-            src="/images/logo-footer.png"
-            alt="Juan Jaramillo AI Consulting Services (JJAICS)"
-            height={200}
-            width={200}
-            class="w-full"
-          />
+          src="/images/logo-footer.png"
+          alt="Juan Jaramillo AI Consulting Services (JJAICS)"
+          height={200}
+          width={200}
+          class="w-full"
+        />
         <p class="mt-4">
           {footer_description}
         </p>
@@ -35,7 +35,7 @@ const { copyright, location, email, phone, footer_description } = config.params;
           {
             footer.map((item, i) => (
               <li class={footer.length - 1 === i ? "mb-0" : "mb-4"}>
-                <a class="hover:text-primary hover:underline " href={item.url}>
+                <a class="hover:text-primary hover:underline" href={item.url}>
                   {item.name}
                 </a>
               </li>

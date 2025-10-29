@@ -7,7 +7,7 @@ const Disqus = () => {
   return (
     <>
       {disqus.enable && (
-        <div className="row mt-16 justify-center ">
+        <div className="row mt-16 justify-center">
           <DiscussionEmbed
             shortname={disqus.shortname}
             config={disqus.settings}

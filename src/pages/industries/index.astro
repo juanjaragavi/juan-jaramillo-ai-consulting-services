@@ -7,18 +7,13 @@ import { getEntry } from "astro:content";
 // import CareerBenifits from "@/components/career/CareerBenifits.astro";
 import { Image } from "astro:assets";
 import CareerBenifits from "@/layouts/function-components/CareerBenifits";
-import JobPosts from "@/layouts/function-components/JobPosts";
-import { getSinglePage } from "@/lib/contentParser.astro";
-import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import type { TCareerIndex } from "@/types";
 
 const careerIndex = (await getEntry<any, string>(
   "careers",
-  "-index"
+  "-index",
 )) as TCareerIndex;
-const { benifits, career, image } = careerIndex.data;
-const categories = await getTaxonomy("careers", "categories");
-const jobposts = await getSinglePage("careers");
+const { benifits, image } = careerIndex.data;
 const page_data = {
   title: careerIndex.data.title,
   page_title: careerIndex.data.page_title,
@@ -47,7 +42,7 @@ const page_data = {
             class="w-full rounded"
           />
           <Image
-            class="lg:h-[150px] lg:w-[150px] absolute -left-[8%] bottom-[12%] z-[-1] h-20 w-20 -rotate-90 lg:-left-8 lg:bottom-4"
+            class="absolute -left-[8%] bottom-[12%] z-[-1] h-20 w-20 -rotate-90 lg:-left-8 lg:bottom-4 lg:h-[150px] lg:w-[150px]"
             src="/images/shape.png"
             height={130}
             width={130}

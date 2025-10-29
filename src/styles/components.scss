@@ -411,7 +411,7 @@ select:invalid {
     @apply my-4 flex rounded-lg py-0 text-dark opacity-100;
   }
   .tab-nav-item.active {
-    @apply border-0 rounded-lg bg-primary/20 py-3.5;
+    @apply rounded-lg border-0 bg-primary/20 py-3.5;
   }
 }
 // career

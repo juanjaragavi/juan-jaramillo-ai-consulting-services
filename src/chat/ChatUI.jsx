@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import OpenAI from "openai";
 import ReactMarkdown from "react-markdown";
 
@@ -11,15 +11,29 @@ const ChatUI = () => {
     },
   ]);
   const [input, setInput] = useState("");
-  const [systemPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // Initialize OpenAI client with API key from environment variable
-  const openai = new OpenAI({
-    apiKey: import.meta.env.PUBLIC_OPENAI_API_KEY,
-    dangerouslyAllowBrowser: true,
-  });
+  const openai = useMemo(() => {
+    if (typeof window === "undefined") {
+      return null;
+    }
+
+    const apiKey =
+      import.meta.env.PUBLIC_OPENAI_API_KEY ?? import.meta.env.OPENAI_API_KEY;
+
+    if (!apiKey) {
+      console.warn(
+        "OpenAI API key is not configured. Chat assistant will be disabled.",
+      );
+      return null;
+    }
+
+    return new OpenAI({
+      apiKey,
+      dangerouslyAllowBrowser: true,
+    });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +43,19 @@ const ChatUI = () => {
     const userMessage = { role: "user", content: input };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput("");
+
+    if (!openai) {
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        {
+          role: "assistant",
+          content:
+            "Live chat is currently unavailable. Please reach out via hola@juanjaramillo.ai instead.",
+        },
+      ]);
+      setIsLoading(false);
+      return;
+    }
 
     try {
       const response = await openai.chat.completions.create({
@@ -66,15 +93,15 @@ const ChatUI = () => {
   };
 
   return (
-    <div className="flex flex-col h-auto min-h-[50vh] max-h-[80vh] max-w-2xl mx-auto p-4">
-      <div className="bg-gray-100 flex-grow overflow-auto mb-4 border rounded p-4">
+    <div className="mx-auto flex h-auto max-h-[80vh] min-h-[50vh] max-w-2xl flex-col p-4">
+      <div className="mb-4 flex-grow overflow-auto rounded border bg-gray-100 p-4">
         {messages.map((message, index) => (
           <div
             key={index}
             className={`mb-2 ${message.role === "user" ? "text-right" : "text-left"}`}
           >
             <span
-              className={`inline-block p-2 rounded ${message.role === "user" ? "bg-primary text-white" : "bg-gray-200"}`}
+              className={`inline-block rounded p-2 ${message.role === "user" ? "bg-primary text-white" : "bg-gray-200"}`}
             >
               <ReactMarkdown className="markdown-content">
                 {message.content}
@@ -90,12 +117,12 @@ const ChatUI = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Type your message..."
-          className="flex-grow p-2 border rounded-l"
+          className="flex-grow rounded-l border p-2"
         />
         <button
           type="submit"
           disabled={isLoading}
-          className="bg-primary text-white p-2 rounded-r"
+          className="rounded-r bg-primary p-2 text-white"
         >
           {isLoading ? "Sending..." : "Send"}
         </button>

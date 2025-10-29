@@ -2,7 +2,6 @@
 title: Services
 page_title: We provide tailored Generative AI solutions for your industry-specific needs.
 
-
 # perfomance
 perfomance:
   - title: AI Expertise
@@ -24,4 +23,5 @@ our_works:
       - AI integration that scales with your business needs
       - Ethical AI implementation ensuring compliance and trust
 ---
+
 At Juan Jaramillo AI Consulting Services, we offer a comprehensive suite of Generative AI solutions designed to drive innovation, efficiency, and growth across your organization.

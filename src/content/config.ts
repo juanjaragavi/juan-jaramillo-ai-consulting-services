@@ -28,8 +28,31 @@ const pagesCollection = defineCollection({
   }),
 });
 
+const genericContentCollection = defineCollection({
+  schema: z
+    .object({
+      title: z.string().optional(),
+      draft: z.boolean().optional(),
+      meta_title: z.string().optional(),
+      description: z.string().optional(),
+      image: z.string().optional(),
+      layout: z.string().optional(),
+    })
+    .passthrough(),
+});
+
 // Export collections
 export const collections = {
   blog: blogCollection,
   pages: pagesCollection,
+  about: genericContentCollection,
+  careers: genericContentCollection,
+  contact: genericContentCollection,
+  features: genericContentCollection,
+  homepage: genericContentCollection,
+  "how-it-works": genericContentCollection,
+  integrations: genericContentCollection,
+  "landing-page": genericContentCollection,
+  pricing: genericContentCollection,
+  authors: genericContentCollection,
 };

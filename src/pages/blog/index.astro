@@ -4,35 +4,50 @@ import PageHeader from "@/components/PageHeader.astro";
 import Shape from "@/components/Shape.astro";
 import BlogCategories from "@/components/blog/BlogCategories.astro";
 import FeaturedBlog from "@/components/blog/FeaturedBlog.astro";
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
 import Cta from "@/layouts/partials/Cta.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
-import type { TIndexData } from "@/types";
+import { BLOG_COLLECTION } from "@/lib/collections";
+import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
+import config from "@/config/config.json";
 
-const { blog_folder } = config.settings;
-const blogIndex = (await getEntry<any, string>(
-  blog_folder,
-  "-index",
-)) as TIndexData;
-const posts = await getSinglePage(blog_folder);
-const categories = await getTaxonomy(config.settings.blog_folder, "categories");
-const sortedPosts = sortByDate(posts);
+const blogIndex = await getEntry(BLOG_COLLECTION, "-index");
+
+if (!blogIndex) {
+  throw new Error("Blog index content is missing");
+}
+
+const posts = await getSinglePage(BLOG_COLLECTION);
+const categories = await getTaxonomy(BLOG_COLLECTION, "categories");
+const sortedPosts = sortByDate<CollectionEntry<"blog">>(posts);
 const featuredPost = sortedPosts.filter((item) => item.data.featured);
 const recentPost = sortedPosts.filter((item) => !item.data.featured);
 const totalPages = Math.ceil(recentPost.length / config.settings.pagination);
 const currentPosts = recentPost.slice(0, config.settings.pagination);
+
+const blogIndexData = blogIndex.data as typeof blogIndex.data &
+  Record<string, unknown>;
+const metaTitle =
+  typeof blogIndexData.meta_title === "string"
+    ? blogIndexData.meta_title
+    : undefined;
+const description =
+  typeof blogIndexData.description === "string"
+    ? blogIndexData.description
+    : undefined;
+const image =
+  typeof blogIndexData.image === "string" ? blogIndexData.image : undefined;
 ---
 
 <Base
   title={blogIndex.data.title}
-  meta_title={blogIndex.data.meta_title}
-  description={blogIndex.data.description}
-  image={blogIndex.data.image}
+  meta_title={metaTitle}
+  description={description}
+  image={image}
 >
   <Shape />
   <section class="page-hero pt-16">
@@ -47,7 +62,7 @@ const currentPosts = recentPost.slice(0, config.settings.pagination);
       <h2 class="h4 mb-4">Recent Posts</h2>
       <Blogs posts={currentPosts} />
       <Pagination
-        section={blog_folder}
+        section={BLOG_COLLECTION}
         currentPage={1}
         totalPages={totalPages}
       />

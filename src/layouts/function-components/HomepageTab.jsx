@@ -5,7 +5,7 @@ import * as Icon from "react-feather";
 const HomepageTab = ({ homepage_tab: { tab_list, title, description } }) => {
   const [tab, setTab] = useState(0);
   return (
-    <div className="tab gx-5 row items-center">
+    <div className="tab row gx-5 items-center">
       <div className="lg:col-7 lg:order-2">
         <div className="tab-content">
           {tab_list.map((item, index) => (
@@ -25,7 +25,7 @@ const HomepageTab = ({ homepage_tab: { tab_list, title, description } }) => {
         <div className="text-container">
           <h2 className="lg:text-4xl">{title}</h2>
           <p className="my-6">{description}</p>
-          <ul className="tab-nav py-0 my-8 border-0">
+          <ul className="tab-nav my-8 border-0 py-0">
             {tab_list.map((item, index) => {
               const FeatherIcon = Icon[humanize(item.icon)];
               return (
@@ -35,7 +35,6 @@ const HomepageTab = ({ homepage_tab: { tab_list, title, description } }) => {
                     tab === index ? "active" : undefined
                   }`}
                   onClick={() => setTab(index)}
-
                 >
                   <span className="tab-icon mr-3 mt-0.5">
                     {" "}

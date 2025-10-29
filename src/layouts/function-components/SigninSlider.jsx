@@ -69,7 +69,7 @@ const SigninSlider = ({ title }) => {
           <div className="relative flex justify-center">
             <div
               width="100%"
-              className=" pagination"
+              className="pagination"
               style={{ width: "100%" }}
               ref={paginationRef}
             ></div>

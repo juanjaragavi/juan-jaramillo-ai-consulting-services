@@ -4,18 +4,19 @@ import Base from "@/layouts/Base.astro";
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 import BannerLandingPage from "@/components/BannerLandingPage.astro";
-import CookieConsent from "../pages/components/CookieConsent";
+import CookieConsent from "./components/_CookieConsent";
 import Accordion from "@/pages/components/accordion.mdx";
 import ChatUI from "@/chat/ChatUI";
 import Cta from "@/layouts/partials/Cta.astro";
 
 const entry = await getEntry("contact", "index");
+
+if (!entry) {
+  throw new Error("Contact content entry is missing");
+}
+
 const { contact_form_action } = config.params;
 const contact = entry.data;
-const page_data = {
-  ...contact,
-  content: contact.body,
-};
 ---
 
 <Base
@@ -40,7 +41,8 @@ const page_data = {
           >
             <li class="leading-none text-dark">
               <p class="inline-flex items-center text-dark">
-                <span class="text-sm leading-none">Get a Free Consultation</span>
+                <span class="text-sm leading-none">Get a Free Consultation</span
+                >
               </p>
             </li>
             <li class="leading-none text-primary">
@@ -74,9 +76,7 @@ const page_data = {
         <div
           class="mb-6 text-center lg:mb-0 lg:text-center xl:text-center 2xl:text-center"
         >
-          <h1 class="mb-12 text-center">
-            Contact Us
-          </h1>
+          <h1 class="mb-12 text-center">Contact Us</h1>
         </div>
       </div>
       <div class="row">
@@ -85,11 +85,11 @@ const page_data = {
             <div>
               <h3 class="mb-5">Doubts? Questions? Ask our AI Agent!</h3>
               <p
-                class="text-center mt-4 p-0 lg:mx-0 xl:mx-0 2xl:mx-0 lg:text-md lg:w-full xl:w-full 2xl:w-full"
+                class="lg:text-md mt-4 p-0 text-center lg:mx-0 lg:w-full xl:mx-0 xl:w-full 2xl:mx-0 2xl:w-full"
               >
-                Our Agent is trained to answer any type
-                of question you may have regarding the Juan Jaramillo AI
-                Consulting Services, so go ahead and ask!
+                Our Agent is trained to answer any type of question you may have
+                regarding the Juan Jaramillo AI Consulting Services, so go ahead
+                and ask!
               </p>
               <ChatUI client:load />
             </div>
@@ -129,16 +129,26 @@ const page_data = {
               />
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="reason">What can we help you with?</label>
+              <label class="form-label" for="reason"
+                >What can we help you with?</label
+              >
               <select name="reason" id="reason" class="form-select" required>
                 <option value="">Select One Option</option>
-                <option value="investment plane">I Need More Information.</option>
-                <option value="investment plane-2">I'm Looking For a More Personalized Service.</option>
-                <option value="investment plane-3">We'd like to be Contacted.</option>
+                <option value="investment plane"
+                  >I Need More Information.</option
+                >
+                <option value="investment plane-2"
+                  >I'm Looking For a More Personalized Service.</option
+                >
+                <option value="investment plane-3"
+                  >We'd like to be Contacted.</option
+                >
               </select>
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="message">Input a Message or Comment (optional)</label>
+              <label class="form-label" for="message"
+                >Input a Message or Comment (optional)</label
+              >
               <textarea
                 class="form-control h-[150px]"
                 id="message"

@@ -28,7 +28,7 @@ counter:
     number: 20
     messurment: K
     color: "#FEC163"
-    
+
 # Gallery
 gallery:
   title: Our mission is to empower businesses with tailored AI solutions that drive meaningful growth, innovation, and efficiency.
@@ -51,7 +51,6 @@ our_works:
       - Proficient in Python, JavaScript, TensorFlow, Hugging Face, PyTorch, and various state-of-the-art ML models
       - Experienced with leading ML platforms including OpenAI, Anthropic, Google VertexAI, and AWS SageMaker
 
-
 ## our works
 features:
   title: We are committed to ethically pushing AI boundaries while ensuring sustainable practices. Our focus remains on delivering exceptional value to clients through cutting-edge AI technologies as we grow and evolve.
@@ -73,7 +72,6 @@ features:
       content: We continuously fine-tune and optimize our solutions to ensure maximum efficiency and ROI.
     - title: Educate
       content: We empower your team with the knowledge to leverage AI effectively in your daily operations.
-    
 
 ## members
 members:
@@ -99,4 +97,5 @@ members:
       field: Software Engineer
       image: "/images/users/user-3.png"
 ---
+
 Founded in 2024 by Juan Jaramillo, an AI expert with 17+ years of experience, Juan Jaramillo AI Consulting Services leads in providing Generative AI solutions across industries.

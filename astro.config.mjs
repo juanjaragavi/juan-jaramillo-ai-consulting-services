@@ -12,7 +12,9 @@ import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.base_url ? config.site.base_url : "https://juanjaramillo.ai",
+  site: config.site.base_url
+    ? config.site.base_url
+    : "https://juanjaramillo.ai",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   integrations: [
@@ -59,6 +61,20 @@ export default defineConfig({
   vite: {
     ssr: {
       noExternal: ["openai"],
+    },
+    build: {
+      rollupOptions: {
+        onwarn(warning, defaultHandler) {
+          if (
+            warning.code === "UNUSED_EXTERNAL_IMPORT" &&
+            warning.message.includes("@astrojs/internal-helpers/remote")
+          ) {
+            return;
+          }
+
+          defaultHandler(warning);
+        },
+      },
     },
   },
   markdown: {

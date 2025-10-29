@@ -1,13 +1,16 @@
 ---
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import BlogSingle from "@/layouts/BlogSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import { BLOG_COLLECTION } from "@/lib/collections";
+import type { CollectionEntry } from "astro:content";
+
+type BlogEntry = CollectionEntry<"blog">;
 
 export async function getStaticPaths() {
-  const posts = await getSinglePage(config.settings.blog_folder);
+  const posts = await getSinglePage(BLOG_COLLECTION);
 
-  const paths = posts.map((post: any) => ({
+  const paths = posts.map((post) => ({
     params: {
       single: post.slug,
     },
@@ -16,8 +19,15 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { post } = Astro.props;
-const { title, meta_title, description, image } = post.data;
+const { post } = Astro.props as { post: BlogEntry };
+const data = post.data as BlogEntry["data"] & Record<string, unknown>;
+
+const title = data.title;
+const meta_title =
+  typeof data.meta_title === "string" ? data.meta_title : undefined;
+const description =
+  typeof data.description === "string" ? data.description : undefined;
+const image = typeof data.image === "string" ? data.image : undefined;
 ---
 
 <Base
