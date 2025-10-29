@@ -16,7 +16,7 @@ perfomance:
 # works
 our_works:
   - title: We'll Transform Your Business with AI So You Can Focus on Growth
-    image: "/images/how-it-work/image-1.png"
+    image: "/images/how-it-work/image-1.webp"
     list:
       - Cutting-edge AI solutions tailored to 10+ industries
       - Data-driven insights to boost your decision-making
