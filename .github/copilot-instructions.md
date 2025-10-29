@@ -1,5 +1,20 @@
 # AI Coding Agent Guide
 
+## Documentation Output Policy
+
+**IMPORTANT**: All generated documentation, reports, summaries, and final iteration files produced by LLM agents MUST be saved exclusively to the **`docs/`** directory at the project root. This includes but is not limited to:
+
+- Implementation reports and summaries
+- Technical documentation
+- Architecture guides
+- Fix/change reports
+- Migration guides
+- Any markdown files documenting completed work
+
+Do NOT save documentation files to the project root. Always use `docs/` as the output location for all generated documentation.
+
+---
+
 ## Project Snapshot
 
 - Built with Astro 4 (`astro.config.mjs`) and Yarn 1 (`package.json`); Netlify deploys expect Node 18 (`netlify.toml`).

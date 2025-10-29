@@ -2,6 +2,32 @@
 
 This file provides guidance to WARP (warp.dev) when working with code in this repository.
 
+## Documentation Output Policy
+
+**CRITICAL DIRECTIVE**: All generated documentation, reports, summaries, guides, and final iteration files produced by AI agents or LLM tools MUST be saved exclusively to the **`docs/`** directory located at the project root.
+
+### Mandatory Output Location
+
+- **Target Directory**: `docs/` (relative to project root)
+- **Applies To**: All markdown files (`.md`), reports, implementation summaries, technical guides, architecture documentation, migration reports, fix summaries, and any other documentation artifacts
+- **Enforcement**: This directive overrides any default or inferred output locations
+
+**Examples of files that MUST go in `docs/`:**
+
+- `FIX_SUMMARY_REPORT.md`
+- `VIEW_TRANSITIONS_GUIDE.md`
+- `IMPLEMENTATION_SUMMARY.md`
+- `ARCHITECTURE_DECISIONS.md`
+- Any other generated `.md` documentation
+
+**Do NOT save documentation to:**
+
+- Project root directory (except this WARP.md and README.md)
+- Source directories (`src/`)
+- Any other location outside `docs/`
+
+---
+
 ## Project Overview
 
 This is an Astro-based website for Juan Jaramillo AI Consulting Services, featuring an AI-powered chatbot, content management, and marketing pages. The site showcases AI consulting services across multiple industries (fintech, e-commerce, healthcare, manufacturing, etc.).
