@@ -18,7 +18,7 @@ const { main }: { main: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
 ---
 
-<header class="header">
+<header class="header" transition:name="site-header" transition:animate="none">
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">

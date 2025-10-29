@@ -9,7 +9,11 @@ const { footer } = menu;
 const { copyright, location, email, phone, footer_description } = config.params;
 ---
 
-<footer class="footer bg-[#F1F1F1]">
+<footer
+  class="footer bg-[#F1F1F1]"
+  transition:name="site-footer"
+  transition:animate="none"
+>
   <div class="container">
     <div class="row gx-5 pb-10 pt-[52px]">
       <div class="col-12 mt-12 md:col-6 lg:col-3">

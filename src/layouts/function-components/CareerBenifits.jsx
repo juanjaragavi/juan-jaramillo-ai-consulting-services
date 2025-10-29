@@ -39,9 +39,12 @@ const CareerBenifits = ({ benifits: { title, description, benifit_list } }) => {
                 </div>
                 <h4 className="h4 mb-4 mt-6">{item.title}</h4>
                 <p className="text-lg leading-6">{item.content}</p>
-                <ul class="mt-6 w-full min-w-full text-sm text-dark lg:-ml-4 lg:text-sm xl:text-sm">
-                  {item.list?.map((list) => (
-                    <li class="text-md lg:text-md xl:text-md mb-2 flex px-0 text-left">
+                <ul className="mt-6 w-full min-w-full text-sm text-dark lg:-ml-4 lg:text-sm xl:text-sm">
+                  {item.list?.map((list, index) => (
+                    <li
+                      key={index}
+                      className="text-md lg:text-md xl:text-md mb-2 flex px-0 text-left"
+                    >
                       <AiFillCheckCircle className="mr-2 fill-primary p-0 text-white" />
                       {list}
                     </li>
