@@ -33,9 +33,9 @@ counter:
 gallery:
   title: Our mission is to empower businesses with tailored AI solutions that drive meaningful growth, innovation, and efficiency.
   images:
-    - "/images/about/gallery-img-1.png"
-    - "/images/about/gallery-img-3.png"
-    - "/images/about/gallery-img-2.png"
+    - "/images/about/gallery-img-1.webp"
+    - "/images/about/gallery-img-3.webp"
+    - "/images/about/gallery-img-2.webp"
 
 # founder
 our_works:
