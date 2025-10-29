@@ -2,7 +2,7 @@
 banner:
   title: "Revolutionize Your Business with Cutting-Edge AI Solutions"
   content: "Harness the Power of Generative AI to Drive Innovation, Efficiency, and Growth"
-  image: /images/banner-img.png
+  image: /images/banner-img.webp
   button:
     label: Schedule a Free Consultation
     link: "/schedule"

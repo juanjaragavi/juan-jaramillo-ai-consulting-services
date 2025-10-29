@@ -3,7 +3,7 @@ title: Schedule
 banner:
   title: Transform Your Business with AI Expertise. Let's talk.
   content: Schedule a free consultation to explore how our tailored AI solutions can drive innovation, efficiency, and growth for your company. Let's turn your AI vision into reality.
-  image: "/images/features-banner-img.png"
+  image: "/images/features-banner-img.webp"
   button:
     label: Schedule a Free Consultation
     link: "/schedule"
