@@ -88,15 +88,37 @@ const ChatUI = () => {
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
                 components={{
-                  p: ({ children }) => <p className="mb-2 text-sm leading-relaxed last:mb-0">{children}</p>,
-                  ul: ({ children }) => <ul className="mb-2 ml-4 list-disc space-y-1 text-sm">{children}</ul>,
-                  ol: ({ children }) => <ol className="mb-2 ml-4 list-decimal space-y-1 text-sm">{children}</ol>,
-                  li: ({ children }) => <li className="ml-2 text-sm">{children}</li>,
-                  strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+                  p: ({ children }) => (
+                    <p className="mb-2 text-sm leading-relaxed last:mb-0">
+                      {children}
+                    </p>
+                  ),
+                  ul: ({ children }) => (
+                    <ul className="mb-2 ml-4 list-disc space-y-1 text-sm">
+                      {children}
+                    </ul>
+                  ),
+                  ol: ({ children }) => (
+                    <ol className="mb-2 ml-4 list-decimal space-y-1 text-sm">
+                      {children}
+                    </ol>
+                  ),
+                  li: ({ children }) => (
+                    <li className="ml-2 text-sm">{children}</li>
+                  ),
+                  strong: ({ children }) => (
+                    <strong className="font-bold">{children}</strong>
+                  ),
                   em: ({ children }) => <em className="italic">{children}</em>,
-                  h1: ({ children }) => <h1 className="mb-2 text-lg font-bold">{children}</h1>,
-                  h2: ({ children }) => <h2 className="mb-2 text-base font-bold">{children}</h2>,
-                  h3: ({ children }) => <h3 className="mb-2 text-sm font-bold">{children}</h3>,
+                  h1: ({ children }) => (
+                    <h1 className="mb-2 text-lg font-bold">{children}</h1>
+                  ),
+                  h2: ({ children }) => (
+                    <h2 className="mb-2 text-base font-bold">{children}</h2>
+                  ),
+                  h3: ({ children }) => (
+                    <h3 className="mb-2 text-sm font-bold">{children}</h3>
+                  ),
                   table: ({ children }) => (
                     <div className="mb-2 overflow-x-auto">
                       <table className="min-w-full border-collapse border border-gray-300 text-xs">
@@ -104,26 +126,45 @@ const ChatUI = () => {
                       </table>
                     </div>
                   ),
-                  thead: ({ children }) => <thead className="bg-gray-100">{children}</thead>,
+                  thead: ({ children }) => (
+                    <thead className="bg-gray-100">{children}</thead>
+                  ),
                   tbody: ({ children }) => <tbody>{children}</tbody>,
-                  tr: ({ children }) => <tr className="border-b border-gray-300">{children}</tr>,
+                  tr: ({ children }) => (
+                    <tr className="border-b border-gray-300">{children}</tr>
+                  ),
                   th: ({ children }) => (
                     <th className="border border-gray-300 px-2 py-1 text-left font-semibold">
                       {children}
                     </th>
                   ),
                   td: ({ children }) => (
-                    <td className="border border-gray-300 px-2 py-1">{children}</td>
+                    <td className="border border-gray-300 px-2 py-1">
+                      {children}
+                    </td>
                   ),
                   code: ({ inline, children }) =>
                     inline ? (
-                      <code className="rounded bg-gray-200 px-1 py-0.5 text-xs font-mono">{children}</code>
+                      <code className="rounded bg-gray-200 px-1 py-0.5 font-mono text-xs">
+                        {children}
+                      </code>
                     ) : (
-                      <code className="block rounded bg-gray-200 p-2 text-xs font-mono overflow-x-auto">{children}</code>
+                      <code className="block overflow-x-auto rounded bg-gray-200 p-2 font-mono text-xs">
+                        {children}
+                      </code>
                     ),
-                  pre: ({ children }) => <pre className="mb-2 overflow-x-auto rounded bg-gray-100 p-2">{children}</pre>,
+                  pre: ({ children }) => (
+                    <pre className="mb-2 overflow-x-auto rounded bg-gray-100 p-2">
+                      {children}
+                    </pre>
+                  ),
                   a: ({ children, href }) => (
-                    <a href={href} className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={href}
+                      className="text-blue-600 hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {children}
                     </a>
                   ),
