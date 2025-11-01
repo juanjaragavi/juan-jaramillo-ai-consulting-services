@@ -10,6 +10,8 @@ import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { slugify, humanize } from "@/lib/utils/textConverter";
 import { BLOG_COLLECTION } from "@/lib/collections";
 
+export const prerender = true;
+
 const categories = await getTaxonomy(BLOG_COLLECTION, "categories");
 export async function getStaticPaths() {
   const categories = await getTaxonomy(BLOG_COLLECTION, "categories");

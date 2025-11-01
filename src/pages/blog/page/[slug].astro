@@ -11,6 +11,8 @@ import { BLOG_COLLECTION } from "@/lib/collections";
 import type { CollectionEntry } from "astro:content";
 import config from "@/config/config.json";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getSinglePage(BLOG_COLLECTION);
   const totalPages = Math.ceil(posts.length / config.settings.pagination);

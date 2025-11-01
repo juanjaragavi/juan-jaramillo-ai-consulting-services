@@ -22,6 +22,8 @@ type IntegrationFrontmatter = {
   };
 };
 
+export const prerender = true;
+
 const integrationsIndex = await getEntry("integrations", "-index");
 
 if (!integrationsIndex) {

@@ -1,4 +1,3 @@
-import { env } from "astro:env/server";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
@@ -13,16 +12,12 @@ const DEFAULT_TRANSPORT_OPTIONS = {
 };
 
 function getBraveApiKey() {
-  if (env?.BRAVE_API_KEY) {
-    return env.BRAVE_API_KEY;
-  }
-
-  if (process.env.BRAVE_API_KEY) {
-    return process.env.BRAVE_API_KEY;
-  }
-
   if (typeof import.meta !== "undefined" && import.meta.env?.BRAVE_API_KEY) {
     return import.meta.env.BRAVE_API_KEY;
+  }
+
+  if (typeof process !== "undefined" && process.env?.BRAVE_API_KEY) {
+    return process.env.BRAVE_API_KEY;
   }
 
   return undefined;
