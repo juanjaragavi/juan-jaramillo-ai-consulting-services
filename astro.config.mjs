@@ -2,7 +2,7 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import netlify from "@astrojs/netlify";
+import vercel from "@astrojs/vercel/serverless";
 import AutoImport from "astro-auto-import";
 import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
@@ -13,8 +13,8 @@ import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "hybrid", // Hybrid mode: static pages + server endpoints
-  adapter: netlify(), // Enable Netlify adapter for server endpoints
+  output: "server", // Server mode for Vercel: enables SSR with automatic static optimization
+  adapter: vercel(), // Enable Vercel serverless adapter
   site: config.site.base_url
     ? config.site.base_url
     : "https://juanjaramillo.tech",
