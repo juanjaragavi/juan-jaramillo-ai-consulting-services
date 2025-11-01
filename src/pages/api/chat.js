@@ -1,5 +1,69 @@
+import {
+  createBraveClient,
+  getBraveToolsForOpenAI,
+  executeBraveTool,
+  closeBraveClient,
+} from "../../lib/mcp/braveClient.js";
+
 // Mark this endpoint as server-rendered (not static)
 export const prerender = false;
+
+const BASE_MODEL_PAYLOAD = {
+  model: "openai/gpt-oss-20b",
+  max_tokens: 512,
+  temperature: 0.7,
+  top_p: 0.7,
+  top_k: 50,
+  repetition_penalty: 1,
+  stop: ["<|eot_id|>", "<|eom_id|>"],
+};
+
+const MAX_TOOL_ITERATIONS = 5;
+
+async function callTogetherChat(apiKey, payload) {
+  const response = await fetch("https://api.together.xyz/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(payload),
+  });
+
+  console.log("[Chat API] Together API response status:", response.status);
+  console.log(
+    "[Chat API] Response headers:",
+    Object.fromEntries(response.headers.entries()),
+  );
+
+  const responseText = await response.text();
+  console.log("[Chat API] Response text length:", responseText.length);
+  console.log(
+    "[Chat API] Response text preview:",
+    responseText.substring(0, 200),
+  );
+
+  if (!response.ok) {
+    console.error(
+      "[Chat API] Together API Error:",
+      response.status,
+      responseText,
+    );
+    throw new Error(
+      `Together API returned ${response.status}: ${responseText}`,
+    );
+  }
+
+  try {
+    return JSON.parse(responseText);
+  } catch (parseError) {
+    console.error("[Chat API] JSON parse error:", parseError);
+    console.error("[Chat API] Raw response:", responseText);
+    throw new Error(
+      `Failed to parse Together API response: ${parseError.message}`,
+    );
+  }
+}
 
 export async function POST({ request }) {
   console.log("[Chat API] Request received");
@@ -40,9 +104,8 @@ export async function POST({ request }) {
       );
     }
 
-    console.log("[Chat API] Making request to Together AI...");
+    console.log("[Chat API] Preparing conversation and MCP tooling...");
 
-    // Add system message to guide the AI
     const systemMessage = {
       role: "system",
       content: `You are an AI assistant for Juan Jaramillo AI Consulting Services. Provide helpful, accurate information about the company's AI consulting services, including AI strategy, machine learning, data analytics, NLP, computer vision, and automation solutions. Format your responses using Markdown for better readability:
@@ -56,76 +119,100 @@ export async function POST({ request }) {
 If asked about specific services, provide detailed, well-formatted information in clean markdown format.`,
     };
 
-    // Prepend system message to conversation
-    const messagesWithSystem = [systemMessage, ...messages];
+    const conversation = [systemMessage, ...messages];
 
-    // Use fetch API directly for better server-side compatibility
-    const response = await fetch(
-      "https://api.together.xyz/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: "openai/gpt-oss-20b",
-          messages: messagesWithSystem,
-          max_tokens: 512,
-          temperature: 0.7,
-          top_p: 0.7,
-          top_k: 50,
-          repetition_penalty: 1,
-          stop: ["<|eot_id|>", "<|eom_id|>"],
-        }),
-      },
-    );
+    let braveClient;
+    let braveTransport;
+    let braveTools = [];
+    let toolsEnabled = false;
 
-    console.log("[Chat API] Together API response status:", response.status);
-    console.log(
-      "[Chat API] Response headers:",
-      Object.fromEntries(response.headers.entries()),
-    );
-
-    const responseText = await response.text();
-    console.log("[Chat API] Response text length:", responseText.length);
-    console.log(
-      "[Chat API] Response text preview:",
-      responseText.substring(0, 200),
-    );
-
-    if (!response.ok) {
-      console.error(
-        "[Chat API] Together API Error:",
-        response.status,
-        responseText,
-      );
-      throw new Error(
-        `Together API returned ${response.status}: ${responseText}`,
-      );
-    }
-
-    let data;
     try {
-      data = JSON.parse(responseText);
-      console.log("[Chat API] Together API response parsed successfully");
-    } catch (parseError) {
-      console.error("[Chat API] JSON parse error:", parseError);
-      console.error("[Chat API] Raw response:", responseText);
+      ({ client: braveClient, transport: braveTransport } =
+        await createBraveClient());
+      braveTools = await getBraveToolsForOpenAI(braveClient);
+      toolsEnabled = braveTools.length > 0;
+      console.log(
+        "[Chat API] Brave MCP client ready. Tool count:",
+        braveTools.length,
+      );
+    } catch (mcpError) {
+      if (process.env.BRAVE_API_KEY) {
+        console.error(
+          "[Chat API] Failed to initialize Brave MCP client:",
+          mcpError,
+        );
+        throw new Error(
+          "Failed to initialize Brave search tooling. See server logs for details.",
+        );
+      }
+      console.warn(
+        "[Chat API] BRAVE_API_KEY missing or MCP unavailable. Continuing without tools.",
+      );
+    }
+
+    let finalMessage = null;
+
+    try {
+      for (let iteration = 0; iteration < MAX_TOOL_ITERATIONS; iteration += 1) {
+        const payload = {
+          ...BASE_MODEL_PAYLOAD,
+          messages: conversation,
+        };
+
+        if (toolsEnabled) {
+          payload.tools = braveTools;
+          payload.tool_choice = "auto";
+        }
+
+        const data = await callTogetherChat(apiKey, payload);
+
+        if (!data.choices || !data.choices[0] || !data.choices[0].message) {
+          console.error(
+            "[Chat API] Invalid response structure:",
+            JSON.stringify(data),
+          );
+          throw new Error("Invalid response from Together API");
+        }
+
+        const assistantMessage = data.choices[0].message;
+        conversation.push(assistantMessage);
+
+        const toolCalls = assistantMessage.tool_calls || [];
+
+        if (!toolCalls.length) {
+          finalMessage = assistantMessage;
+          break;
+        }
+
+        if (!toolsEnabled || !braveClient) {
+          throw new Error(
+            "Model requested a tool call but Brave tooling is not available.",
+          );
+        }
+
+        console.log(
+          "[Chat API] Tool calls requested:",
+          toolCalls.map((call) => call.function?.name),
+        );
+
+        for (const toolCall of toolCalls) {
+          const toolMessage = await executeBraveTool(braveClient, toolCall);
+          conversation.push(toolMessage);
+        }
+      }
+    } finally {
+      if (braveClient && braveTransport) {
+        await closeBraveClient(braveClient, braveTransport);
+      }
+    }
+
+    if (!finalMessage) {
       throw new Error(
-        `Failed to parse Together API response: ${parseError.message}`,
+        "Failed to retrieve final assistant response within tool iteration limit.",
       );
     }
 
-    if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-      console.error(
-        "[Chat API] Invalid response structure:",
-        JSON.stringify(data),
-      );
-      throw new Error("Invalid response from Together API");
-    }
-
-    const content = data.choices[0].message.content;
+    const content = finalMessage.content;
     console.log(
       "[Chat API] Success! Response content length:",
       content?.length,

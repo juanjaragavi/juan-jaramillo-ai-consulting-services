@@ -88,16 +88,16 @@ After deploying these changes:
 
 1. Commit the changes:
 
-    ```bash
-    git add .
-    git commit -m "fix: update to hybrid mode and fix image handling for production"
-    ```
+   ```bash
+   git add .
+   git commit -m "fix: update to hybrid mode and fix image handling for production"
+   ```
 
 2. Push to GitHub:
 
-    ```bash
-    git push origin main
-    ```
+   ```bash
+   git push origin main
+   ```
 
 3. Verify Netlify environment variables are set (see above)
 
