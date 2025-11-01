@@ -36,14 +36,14 @@ This is an Astro-based website for Juan Jaramillo AI Consulting Services, featur
 
 ### Core Commands
 
-- **Start dev server**: `npm run dev` or `yarn dev` (runs Astro dev server)
-- **Build for production**: `npm run build` or `yarn build`
+- **Start dev server**: `npm run dev` (runs Astro dev server)
+- **Build for production**: `npm run build`
 - **Generate JSON from markdown**: `npm run json` (creates JSON files from markdown content in `src/content/posts`)
 - **Format code**: `npm run format` (Prettier formatting for all files)
 
 ### Package Manager
 
-This project uses **Yarn 1.22.19** as specified in `package.json`. Prefer `yarn` commands over `npm`.
+This project uses **npm** as the standard Node package manager. All commands should use `npm`.
 
 ## Architecture
 

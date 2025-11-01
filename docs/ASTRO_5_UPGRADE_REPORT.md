@@ -284,8 +284,8 @@ const blogCollection = defineCollection({
 
 ### Critical Tests (MUST COMPLETE)
 
-- [ ] **Build succeeds:** Run `yarn install && yarn build`
-- [ ] **Development server starts:** Run `yarn dev`
+- [ ] **Build succeeds:** Run `npm install && npm run build`
+- [ ] **Development server starts:** Run `npm run dev`
 - [ ] **Content collections load:** Verify blog posts and pages render
 - [ ] **ClientRouter transitions work:** Test page navigation with view transitions
 - [ ] **404 page renders:** Test `/404` route
@@ -356,13 +356,13 @@ git checkout main
 ```bash
 # Clear existing node_modules and lockfile
 rm -rf node_modules
-rm yarn.lock
+rm package-lock.json
 
 # Install updated dependencies
-yarn install
+npm install
 ```
 
-**Expected Output:** Yarn should install all packages without peer dependency errors.
+**Expected Output:** npm should install all packages without peer dependency errors.
 
 **⚠️ If you see warnings:**
 

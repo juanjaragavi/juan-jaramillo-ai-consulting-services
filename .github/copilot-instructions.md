@@ -17,7 +17,7 @@ Do NOT save documentation files to the project root. Always use `docs/` as the o
 
 ## Project Snapshot
 
-- Built with Astro 4 (`astro.config.mjs`) and Yarn 1 (`package.json`); Netlify deploys expect Node 18 (`netlify.toml`).
+- Built with Astro 4 (`astro.config.mjs`) and npm (`package.json`); Vercel/Netlify deploys expect Node 18 (`netlify.toml`).
 - Path alias `@` maps into `src/` (`tsconfig.json`); components live in `src/layouts/components`, partials in `src/layouts/partials`, shortcodes in `src/layouts/shortcodes`.
 - Global site settings and branding come from `src/config/config.json`, while design tokens live in `src/config/theme.json` and drive Tailwind config.
 - Tailwind is extended via SCSS layers in `src/styles/main.scss`; keep utility classes aligned with the custom `.row`/`.col-*` grid supplied by `tailwind-bootstrap-grid` (`tailwind.config.js`).
@@ -47,7 +47,7 @@ Do NOT save documentation files to the project root. Always use `docs/` as the o
 
 ## Workflows & Utilities
 
-- Primary commands: `yarn install`, `yarn dev`, `yarn build`, and `yarn format`. Run `yarn json` only if `src/content/posts` exists—the script converts Markdown posts into `.json` for legacy consumers.
+- Primary commands: `npm install`, `npm run dev`, `npm run build`, and `npm run format`. Run `npm run json` only if `src/content/posts` exists—the script converts Markdown posts into `.json` for legacy consumers.
 - Use `astro sync` (implicit in Astro 4 toolchain) after adding new content collection fields to refresh generated types in `src/.astro/`.
 - Netlify builds run `astro build`; confirm any new environment variables are whitelisted in Netlify’s UI as Astro does not expose them by default.
 - Keep navigation and footer links in sync through `src/config/menu.json` and `src/config/social.json`; `Header.astro` relies on `menu.json` structure (including `hasChildren` arrays).

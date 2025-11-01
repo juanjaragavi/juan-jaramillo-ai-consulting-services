@@ -4,7 +4,6 @@
   "description": "Empowering businesses with cutting-edge AI solutions. We transform challenges into opportunities, driving innovation and growth across industries.",
   "author": "juan-jaramillo-ai-consulting-services",
   "license": "MIT",
-  "packageManager": "yarn@1.22.19",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
