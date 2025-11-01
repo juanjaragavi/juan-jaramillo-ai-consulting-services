@@ -2,6 +2,7 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import netlify from "@astrojs/netlify";
 import AutoImport from "astro-auto-import";
 import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
@@ -12,6 +13,9 @@ import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "static", // Most pages are static
+  adapter: netlify(), // Enable Netlify adapter for server endpoints
+  // output: 'static' is the default - individual endpoints can opt-in to server rendering
   site: config.site.base_url
     ? config.site.base_url
     : "https://juanjaramillo.tech",
