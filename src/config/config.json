@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Juan Jaramillo AI Consulting Services",
-    "base_url": "https://juanjaramillo.ai",
+    "base_url": "https://juanjaramillo.tech",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -10,13 +10,11 @@
     "logo_height": "43",
     "logo_text": "Juan Jaramillo AI Consulting Services"
   },
-
   "settings": {
     "pagination": 6,
     "summary_length": 100,
     "blog_folder": "blog"
   },
-
   "call_to_action": {
     "title": "Ready to revolutionize your business with AI?",
     "description": "Let's embark on your transformative AI journey today and unlock new possibilities.",
@@ -25,22 +23,19 @@
       "link": "/schedule"
     }
   },
-
   "disqus": {
     "enable": true,
     "shortname": "juan-jaramillo-ai-consulting-services",
     "settings": {}
   },
-
   "params": {
     "footer_description": "Empowering businesses with cutting-edge AI solutions. We transform challenges into opportunities, driving innovation and growth across industries.",
-    "email": "hola@juanjaramillo.tech",
+    "email": "info@juanjaramillo.tech",
     "location": "Juan Jaramillo AI Consulting Services",
     "phone": "(+57) 305 420 6139",
     "contact_form_action": "#",
     "copyright": "Copyright © 2024 Juan Jaramillo AI Consulting Services. All rights reserved. Designed and developed by [Juan Jaramillo](https://juanjaramillo.tech)"
   },
-
   "metadata": {
     "meta_author": "Juan Jaramillo AI",
     "meta_image": "https://media.juanjaramillo.tech/og-image.webp",

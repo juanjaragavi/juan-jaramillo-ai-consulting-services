@@ -114,7 +114,7 @@ MDX shortcodes are auto-imported via `astro-auto-import`:
 
 - **Component**: `src/chat/ChatUI.jsx` (React component)
 - **Model**: OpenAI GPT-4o-mini-2024-07-18
-- **API Key**: Uses `PUBLIC_OPENAI_API_KEY` from environment variables
+- **API Key**: Uses `PUBLIC_TOGETHER_API_KEY` from environment variables
 - **System Prompt**: Embedded in ChatUI.jsx with comprehensive company information
 - **Integration**: Client-side OpenAI SDK with `dangerouslyAllowBrowser: true`
 
@@ -130,7 +130,7 @@ MDX shortcodes are auto-imported via `astro-auto-import`:
 Required environment variables (create `.env` file in root):
 
 ```env
-PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
+PUBLIC_TOGETHER_API_KEY=your_TOGETHER_API_KEY_here
 ```
 
 ## Content Management
@@ -190,7 +190,7 @@ PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
 
 ## Troubleshooting
 
-- **OpenAI errors**: Verify `PUBLIC_OPENAI_API_KEY` is set in environment
+- **OpenAI errors**: Verify `PUBLIC_TOGETHER_API_KEY` is set in environment
 - **Build failures**: Check for missing frontmatter in content files
 - **Style inconsistencies**: Ensure `theme.json` values align with Tailwind config
 - **TypeScript errors**: Verify path aliases match `tsconfig.json` configuration

@@ -14,7 +14,7 @@ import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
 export default defineConfig({
   site: config.site.base_url
     ? config.site.base_url
-    : "https://juanjaramillo.ai",
+    : "https://juanjaramillo.tech",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   integrations: [

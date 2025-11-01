@@ -1,12 +1,12 @@
 ---
 title: "Privacy Policy - Juan Jaramillo AI Consulting Services (JJAICS)"
-excerpt: Juan Jaramillo AI Consulting Services (hereinafter referred to as "JJAICS," "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website <https://juanjaramillo.ai> (the "Site") or use our AI consulting services. <br /> We adhere to Colombian data protection laws, including Law 1581 of 2012 and Decree 1377 of 2013, which regulate the protection of personal data. By using our Site or services, you consent to the data practices described in this policy.
+excerpt: Juan Jaramillo AI Consulting Services (hereinafter referred to as "JJAICS," "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website <https://juanjaramillo.tech> (the "Site") or use our AI consulting services. <br /> We adhere to Colombian data protection laws, including Law 1581 of 2012 and Decree 1377 of 2013, which regulate the protection of personal data. By using our Site or services, you consent to the data practices described in this policy.
 draft: false
 ---
 
 ## 1. Introduction
 
-Juan Jaramillo AI Consulting Services (hereinafter referred to as "JJAICS," "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website <https://juanjaramillo.ai> (the "Site") or use our AI consulting services.
+Juan Jaramillo AI Consulting Services (hereinafter referred to as "JJAICS," "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website <https://juanjaramillo.tech> (the "Site") or use our AI consulting services.
 
 We adhere to Colombian data protection laws, including Law 1581 of 2012 and Decree 1377 of 2013, which regulate the protection of personal data. By using our Site or services, you consent to the data practices described in this policy.
 
@@ -94,7 +94,7 @@ We may update our Privacy Policy from time to time. Any changes will be posted o
 If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
 
 Juan Jaramillo AI Consulting Services (JJAICS)
-Email: [hola@juanjaramillo.ai](mailto:hola@juanjaramillo.ai)
+Email: [info@juanjaramillo.tech](mailto:info@juanjaramillo.tech)
 Address: Cll. 7D # 43 A 40 Piso 8. Medellín, Colombia, 50001
 Phone: (+57) 305 420 6139
 

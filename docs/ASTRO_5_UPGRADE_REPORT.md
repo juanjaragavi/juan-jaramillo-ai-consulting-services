@@ -489,7 +489,7 @@ yarn build
 
 1. Review OpenAI SDK v6 changelog
 2. Update API calls if method signatures changed
-3. Verify `OPENAI_API_KEY` environment variable is set
+3. Verify `TOGETHER_API_KEY` environment variable is set
 
 ---
 

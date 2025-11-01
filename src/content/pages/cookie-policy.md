@@ -1,12 +1,12 @@
 ---
 title: "Cookie Policy - Juan Jaramillo AI Consulting Services (JJAICS)"
-excerpt: This Cookie Policy explains how Juan Jaramillo AI Consulting Services ("JJAICS", "we", "us", or "our") uses cookies and similar technologies on our website <https://juanjaramillo.ai> (the "Website"). This policy is designed to help you understand what cookies are, how we use them, and the choices you have regarding their use.
+excerpt: This Cookie Policy explains how Juan Jaramillo AI Consulting Services ("JJAICS", "we", "us", or "our") uses cookies and similar technologies on our website <https://juanjaramillo.tech> (the "Website"). This policy is designed to help you understand what cookies are, how we use them, and the choices you have regarding their use.
 draft: false
 ---
 
 ## Introduction
 
-This Cookie Policy explains how Juan Jaramillo AI Consulting Services ("JJAICS", "we", "us", or "our") uses cookies and similar technologies on our website <https://juanjaramillo.ai> (the "Website"). This policy is designed to help you understand what cookies are, how we use them, and the choices you have regarding their use.
+This Cookie Policy explains how Juan Jaramillo AI Consulting Services ("JJAICS", "we", "us", or "our") uses cookies and similar technologies on our website <https://juanjaramillo.tech> (the "Website"). This policy is designed to help you understand what cookies are, how we use them, and the choices you have regarding their use.
 
 ## What are Cookies?
 
@@ -59,7 +59,7 @@ JJAICS complies with Colombian data protection laws, including Law 1581 of 2012 
 
 ## Contact Us
 
-If you have any questions about our use of cookies or other technologies, please email us at [hola@juanjaramillo.ai](mailto:hola@juanjaramillo.ai) or by post to:
+If you have any questions about our use of cookies or other technologies, please email us at [info@juanjaramillo.tech](mailto:info@juanjaramillo.tech) or by post to:
 
 Juan Jaramillo AI Consulting Services (JJAICS)
 Cll. 7D # 43 A 40 Piso 8. Medellín, Colombia, 50001

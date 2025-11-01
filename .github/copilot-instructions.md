@@ -41,7 +41,7 @@ Do NOT save documentation files to the project root. Always use `docs/` as the o
 ## Interactive Islands
 
 - React islands live under `src/chat` and `src/pages/components`; hydrate them with the appropriate client directive (`client:load` on `ChatUI` in `src/pages/contact.astro`).
-- `ChatUI.jsx` uses the browser OpenAI SDK with `dangerouslyAllowBrowser`; set `OPENAI_API_KEY` in a `.env` (and configure exposure rules if refactoring to server-only use).
+- `ChatUI.jsx` uses the browser OpenAI SDK with `dangerouslyAllowBrowser`; set `TOGETHER_API_KEY` in a `.env` (and configure exposure rules if refactoring to server-only use).
 - Cookie consent is delivered both via the `@jop-software/astro-cookieconsent` integration and an optional React fallback (`src/pages/components/CookieConsent.jsx`). Avoid double-mounting in pages.
 - When importing React or MDX helpers inside `.astro` files, keep them tree-shakeable by deferring heavy data work to `getStaticPaths`/`getEntry` blocks.
 

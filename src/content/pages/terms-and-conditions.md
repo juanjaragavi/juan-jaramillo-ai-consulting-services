@@ -11,7 +11,7 @@ These Terms and Conditions govern your use of the Juan Jaramillo AI Consulting S
 ## 2. Definitions
 
 - "Company," "we," "us," or "our" refers to Juan Jaramillo AI Consulting Services (JJAICS), a company registered in Colombia.
-- "Website" refers to <https://juanjaramillo.ai> and all associated subdomains.
+- "Website" refers to <https://juanjaramillo.tech> and all associated subdomains.
 - "Services" refers to the AI consulting services, including but not limited to strategy development, implementation, and training, provided by JJAICS.
 - "Client," "you," or "your" refers to the individual or entity accessing our website or using our services.
 
@@ -93,7 +93,7 @@ We reserve the right to modify these Terms and Conditions at any time. Changes w
 If you have any questions about these Terms and Conditions, please contact us at:
 
 Juan Jaramillo AI Consulting Services (JJAICS)
-Email: [hola@juanjaramillo.ai](mailto:hola@juanjaramillo.ai)
+Email: [info@juanjaramillo.tech](mailto:info@juanjaramillo.tech)
 Address: Cll. 7D # 43 A 40 Piso 8. Medellín, Colombia, 50001
 
 ---

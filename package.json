@@ -39,6 +39,7 @@
     "remark-toc": "^9.0.0",
     "shufflejs": "^6.1.0",
     "swiper": "^12.0.3",
+    "together-ai": "^0.29.0",
     "vanilla-cookieconsent": "^3.1.0"
   },
   "devDependencies": {
