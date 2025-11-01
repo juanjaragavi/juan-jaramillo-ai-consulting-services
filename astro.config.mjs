@@ -13,9 +13,8 @@ import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "static", // Most pages are static
+  output: "hybrid", // Hybrid mode: static pages + server endpoints
   adapter: netlify(), // Enable Netlify adapter for server endpoints
-  // output: 'static' is the default - individual endpoints can opt-in to server rendering
   site: config.site.base_url
     ? config.site.base_url
     : "https://juanjaramillo.tech",
