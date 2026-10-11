@@ -9,8 +9,6 @@ import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
 
-import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
-
 // https://astro.build/config
 export default defineConfig({
   output: "server", // Server mode for Vercel: enables SSR with automatic static optimization
@@ -44,22 +42,6 @@ export default defineConfig({
       ],
     }),
     mdx(),
-    jopSoftwarecookieconsent({
-      guiOptions: {
-        consentModal: {
-          layout: "cloud",
-          position: "bottom center",
-          equalWeightButtons: true,
-          flipButtons: false,
-        },
-        preferencesModal: {
-          layout: "box",
-          position: "right",
-          equalWeightButtons: true,
-          flipButtons: false,
-        },
-      },
-    }),
   ],
   vite: {
     ssr: {
