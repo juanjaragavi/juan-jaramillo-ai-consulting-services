@@ -12,6 +12,11 @@ npm-debug.log*
 # environment variables
 .env
 .env.production
+.env.local
+.env.*.local
+
+# Vercel CLI link and local build output (`astro build` with @astrojs/vercel)
+.vercel
 
 # macOS-specific files
 .DS_Store
